@@ -1,0 +1,8 @@
+@font-face {
+    font-family: evafiya;
+    src: url('../Font/Evafiya-Font/Evafiya.ttf');
+}
+
+.test{
+    font-family: evafiya;
+}
