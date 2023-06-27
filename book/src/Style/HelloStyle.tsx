@@ -8,7 +8,7 @@ const HelloStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 200%;
+    
     letter-spacing: 5px;
     font-family: evafiya;
 
@@ -27,12 +27,34 @@ const HelloStyle = styled.div`
         opacity: 0;
         font-family: evafiya;
         font-weight: 400;
+        font-size: 400%;
     }
 
     .welcome{
         position: absolute;
         opacity: 0;
+        font-size: 400%;
     }
+
+    .scroll{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        bottom:  20%;
+        font-size: 200%;    
+        opacity: 0;
+    }
+
+
+    .arrow{
+        position: relative;
+        width: 40px;
+        top: 40px;
+    }
+;
+
 `
 
 export default HelloStyle

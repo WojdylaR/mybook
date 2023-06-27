@@ -4,6 +4,7 @@ import { GlobalStyle } from "./Style/Global";
 import {Routes, Route} from "react-router-dom"
 import PageStyle from "./Style/PageStyle";
 import './Style/font.css'
+import NavBar from "./Component/NavBar";
 
 
 
@@ -14,6 +15,7 @@ function App() {
     <div>
       <GlobalStyle />
       <PageStyle>
+        <NavBar />
       <Routes >
         <Route path="/" element={<Home />} />
       </Routes>
