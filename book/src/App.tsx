@@ -15,7 +15,7 @@ function App() {
     <div>
       <GlobalStyle />
       <PageStyle>
-        <NavBar />
+      <NavBar />
       <Routes >
         <Route path="/" element={<Home />} />
       </Routes>

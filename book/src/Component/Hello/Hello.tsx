@@ -1,17 +1,17 @@
 import { useEffect } from "react"
 import HelloStyle from "../../Style/HelloStyle"
 import {gsap} from "gsap"
-import './test.css'
 
 function Hello(){
-    gsap.fromTo(".letter", {opacity: 0, x: 200, }, {opacity: 1, x: 0, stagger: 0.25})
+    const tl = gsap.timeline();
+
     useEffect(() => {
-        gsap.fromTo(".letter", {opacity: 0, x: 200 }, {opacity: 1, x: 0, stagger: 0.25})
-        gsap.to(".letter", {fontSize: 150, letterSpacing: 100, x: 0,delay: 1.5})
-        gsap.to(".letter",{x: -200,delay: 2.5, duration: 1, stagger: 0.2, opacity: 0})
-        gsap.to(".welcome", {opacity: 1, delay: 4, duration: 1})
-        gsap.to(".welcome", {y:-150,fontSize: 125, delay: 5, duration: 1})
-        gsap.to(".scroll", {opacity: 1, delay: 7, duration: 2, repeat: Infinity})
+        tl.fromTo(".letter", {opacity: 0, x: 200 }, {opacity: 1, x: 0, stagger: 0.25})
+        tl.to(".letter", {fontSize: 150,delay: 0.5, letterSpacing: 100, x: 0,})
+        tl.to(".letter",{x: -200,delay: 0.5, duration: 1, stagger: 0.2, opacity: 0})
+        tl.to(".welcome", {opacity: 1, duration: 1})
+        tl.to(".welcome", {y:-175,fontSize: 125, duration: 1})
+        tl.to(".scroll", {opacity: 1,delay: 1, duration: 0.75, yoyo: true,repeat: Infinity})
     })
 
     return(
