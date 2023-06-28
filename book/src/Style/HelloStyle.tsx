@@ -3,8 +3,8 @@ import '../Font/Evafiya-Font/Evafiya.ttf'
 
 const HelloStyle = styled.div`
     position: relative;
-    width: 100%;
-    height: 90vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

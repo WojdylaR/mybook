@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 function NavBar() {
 
     useEffect(() => {
-        gsap.to('.nav_bar', {opacity: 1, duration: 0.5, delay: 0})
+        gsap.to('.nav_bar', {opacity: 1, duration: 0.5, delay: 7.5})
     })
 
     function handleMouseOver(name: string) {
@@ -20,11 +20,11 @@ function NavBar() {
         <NavBarStyle className='nav_bar'>
             <div className='logo_container'>
                 <label id='home' style={{top: '25px'}}>HOME</label>
-                <img alt="home" onMouseOut={() => handleMouseOut('home')} onMouseOver={() => handleMouseOver('home')} className='logo' src={require('../Assets/home.png')}/>
+                <a href="#home"><img alt="home" onMouseOut={() => handleMouseOut('home')} onMouseOver={() => handleMouseOver('home')} className='logo' src={require('../Assets/home.png')}/></a>
             </div>
             <div>
                 <label id='profil' style={{top: '40px'}}>PROFIL</label>
-                <img alt="profil" onMouseOut={() => handleMouseOut('profil')} onMouseOver={() => handleMouseOver('profil')} className='logo' src={require('../Assets/profil.png')}/>
+                <a href="#profil"><img alt="profil" onMouseOut={() => handleMouseOut('profil')} onMouseOver={() => handleMouseOver('profil')} className='logo' src={require('../Assets/profil.png')}/></a>
             </div>
             <div>
                 <label id='projects' style={{top: '60px'}}>PROJECTS</label>

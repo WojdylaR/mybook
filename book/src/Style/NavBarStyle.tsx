@@ -22,9 +22,6 @@ const NavBarStyle = styled.nav`
         transition: 0.1s;
     }
 
-    #home{
-    }
-
     .logo:hover{
         scale: 1.2;
         cursor: pointer;
@@ -35,6 +32,8 @@ const NavBarStyle = styled.nav`
         writing-mode: vertical-rl;
         text-orientation: upright;
         right: 35px;
+        font-family: Bebas Neue;
+        letter-spacing: -1px;
         opacity: 0;
     }
 `
