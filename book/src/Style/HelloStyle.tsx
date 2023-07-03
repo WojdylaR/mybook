@@ -52,6 +52,7 @@ const HelloStyle = styled.div`
         position: relative;
         width: 40px;
         top: 40px;
+        
     }
 ;
 

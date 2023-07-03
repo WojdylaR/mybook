@@ -2,12 +2,12 @@ import VvaStyle from "../../Style/Project/VvaStyle";
 
 function Vva() {
     return (
-        <VvaStyle style={{}} id="vva">
-            <div id="container">
-                <iframe id='frame' src='https://www.vavoirailleurs.org' />
+        <VvaStyle id="vva">
+            <div id="vva-content">
+                VA VOIR AILLEURS
             </div>
         </VvaStyle>
     )
 }
 
-export default Vva
+export default Vva  

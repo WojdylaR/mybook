@@ -15,8 +15,7 @@ function Hello(){
     })
 
     return(
-        <HelloStyle>
-
+        <HelloStyle id="hello">
                 <span className="letter">H</span>
                 <span className="letter">E</span>
                 <span className="letter">L</span>

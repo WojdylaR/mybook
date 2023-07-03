@@ -2,8 +2,10 @@ import RagetattStyle from "../../Style/Project/RagetattStyle";
 
 function Ragetatt(){
     return(
-        <RagetattStyle style={{}} id="ragetatt">
-            RAGE TATT
+        <RagetattStyle id="ragetatt">
+            <div id="ragetatt-content">
+                RAGE TATT
+            </div>
         </RagetattStyle>
     )
 }

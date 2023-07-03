@@ -1,21 +1,11 @@
-import ProfilStyle from "../../Style/ProfilStyle"
+import ProfilStyle from "../../Style/ProfilStyle";
+import RagetattStyle from "../../Style/Project/RagetattStyle";
 
-function Profil (){
+function Profil(){
     return(
-        <ProfilStyle>
-            <div id="cadre">
-                <div id="c1">
-                    
-                </div>
-                <div id="c2">
-
-                </div>
-                <div id="c3">
-
-                </div>
-                <div id='c4'>
-
-                </div>
+        <ProfilStyle id="profil-page">
+            <div id="profil-content">
+                PROFIL 
             </div>
         </ProfilStyle>
     )

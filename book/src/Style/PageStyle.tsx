@@ -9,7 +9,7 @@ const PageStyle = styled.div`
     }
 
     .letter{
-        font-family: evafiya;}
+    font-family: evafiya;}
     position: absolute;
     width:100%;
     left: 0;
