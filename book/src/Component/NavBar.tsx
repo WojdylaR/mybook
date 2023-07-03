@@ -24,7 +24,7 @@ function NavBar() {
             </div>
             <div>
                 <label id='profil' style={{top: '40px'}}>PROFIL</label>
-                <a href="#profil"><img alt="profil" onMouseOut={() => handleMouseOut('profil')} onMouseOver={() => handleMouseOver('profil')} className='logo' src={require('../Assets/profil.png')}/></a>
+                <img alt="profil" onMouseOut={() => handleMouseOut('profil')} onMouseOver={() => handleMouseOver('profil')} className='logo' src={require('../Assets/profil.png')}/>
             </div>
             <div>
                 <label id='projects' style={{top: '60px'}}>PROJECTS</label>

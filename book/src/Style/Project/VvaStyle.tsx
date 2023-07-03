@@ -4,15 +4,8 @@ const VvaStyle = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: rgb(218, 169, 191);
-
-    h1{
-        position: relative;
-        left: 2.5%;
-        top: 6%;
-        font-family: Evafiya;
-        font-size: 300%;
-        letter-spacing: 10px;
-    }
+    position: relative;
+    top: 100%;
 
     #container{
         position: relative; 
