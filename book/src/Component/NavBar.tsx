@@ -19,19 +19,19 @@ function NavBar() {
     return( 
         <NavBarStyle className='nav_bar'>
             <div className='logo_container'>
-                <label id='home' style={{top: '25px'}}>HOME</label>
+                <label id='homeNav' style={{top: '25px'}}>HOME</label>
                 <a href="#home"><img alt="home" onMouseOut={() => handleMouseOut('home')} onMouseOver={() => handleMouseOver('home')} className='logo' src={require('../Assets/home.png')}/></a>
             </div>
             <div>
-                <label id='profil' style={{top: '40px'}}>PROFIL</label>
+                <label id='profilNav' style={{top: '40px'}}>PROFIL</label>
                 <img alt="profil" onMouseOut={() => handleMouseOut('profil')} onMouseOver={() => handleMouseOver('profil')} className='logo' src={require('../Assets/profil.png')}/>
             </div>
             <div>
-                <label id='projects' style={{top: '60px'}}>PROJECTS</label>
+                <label id='projectsNav' style={{top: '60px'}}>PROJECTS</label>
                 <img alt="projects" onMouseOut={() => handleMouseOut('projects')} onMouseOver={() => handleMouseOver('projects')} className='logo' src={require('../Assets/work.png')}/>
             </div>
             <div>
-                <label id='contact' style={{top: '50px'}}>CONTACT</label>
+                <label id='contactNav' style={{top: '50px'}}>CONTACT</label>
                 <img alt="contact" onMouseOut={() => handleMouseOut('contact')} onMouseOver={() => handleMouseOver('contact')} className='logo' src={require('../Assets/contact.png')}/>
             </div>
         </NavBarStyle>

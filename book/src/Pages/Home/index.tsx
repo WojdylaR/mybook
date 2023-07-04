@@ -5,17 +5,17 @@ import Contact from '../../Component/Contact/Contact'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react'
-import Profil from '../../Component/Profil/Profil'
+import Profil from '../../Component/Profil/About'
 gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
 
     useEffect(() =>{
         ScrollTrigger.create({
-            trigger: "#vva",
+            trigger: "#projects",
             start: "top top", 
             end: "bottom 0px",
-            pin: "#vva-content"
+            pin: "#projects-content"
           });
           ScrollTrigger.create({
             trigger: "#profil-page",
@@ -23,12 +23,6 @@ function Home() {
             end: "bottom 0px",
             pin: "#profil-content"
         });
-          ScrollTrigger.create({
-            trigger: "#ragetatt",
-            start: "top top", 
-            end: "bottom 0px",
-            pin: "#ragetatt-content"
-          });
          
         })
 

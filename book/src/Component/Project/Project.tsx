@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import ProjectStyle from "../../Style/Project/ProjectStyle";
-import Profil from "../Profil/Profil";
+import Profil from "../Profil/About";
 import Vva from "./Vva";
 import {gsap} from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,9 +10,11 @@ gsap.registerPlugin(ScrollTrigger)
 function Project(){
 
     return(
-        <ProjectStyle id="project">
-            <Vva />
-            <Ragetatt />
+        <ProjectStyle id="projects">
+            <div id="projects-content">
+                <Vva />
+                <Ragetatt />
+            </div>
         </ProjectStyle>
     )
 }
