@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
-import NavBarStyle from '../Style/NavBarStyle'
+import NavBarStyle from '../../Style/NavBarStyle'
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from 'gsap/all'
 gsap.registerPlugin(ScrollToPlugin)
+
 
 function NavBar() {
 
@@ -29,19 +30,17 @@ function NavBar() {
         <NavBarStyle className='nav_bar'>
             <div className='logo_container'>
                 <label id='homeNav' style={{top: '25px'}}>HOME</label>
-                <a href="#home"><img alt="home" onClick={() =>scrollOnClick('home')} onMouseOut={() => handleMouseOut('homeNav')} onMouseOver={() => handleMouseOver('homeNav')} className='logo' src={require('../Assets/home.png')}/></a>
+                <a href="#home"><img alt="home" onClick={() =>scrollOnClick('home')} onMouseOut={() => handleMouseOut('homeNav')} onMouseOver={() => handleMouseOver('homeNav')} className='logo' src={require('../../Assets/home.png')}/></a>
             </div>
             <div>
                 <label id='profilNav' style={{top: '40px'}}>PROFIL</label>
-                <img alt="profil" onClick={() =>scrollOnClick('profil-page')}    onMouseOut={()  => handleMouseOut('profilNav')} onMouseOver={() => handleMouseOver('profilNav')} className='logo' src={require('../Assets/profil.png')}/>
-            </div>
-            <div>
+                <img alt="profil" onClick={() =>scrollOnClick('profil-page')}    onMouseOut={()  => handleMouseOut('profilNav')} onMouseOver={() => handleMouseOver('profilNav')} className='logo' src={require('../../Assets/profil.png')}/>
+            </div><div>
                 <label id='projectsNav' style={{top: '60px'}}>PROJECTS</label>
-                <img alt="projects" onClick={() =>scrollOnClick('projects')} onMouseOut={() => handleMouseOut('projectsNav')} onMouseOver={() => handleMouseOver('projectsNav')} className='logo' src={require('../Assets/work.png')}/>
-            </div>
-            <div>
+                <img alt="projects" onClick={() =>scrollOnClick('projects')} onMouseOut={() => handleMouseOut('projectsNav')} onMouseOver={() => handleMouseOver('projectsNav')} className='logo' src={require('../../Assets/work.png')}/>
+            </div><div>
                 <label id='contactNav' style={{top: '50px'}}>CONTACT</label>
-                <img alt="contact" onClick={() =>scrollOnClick('contact-content')} onMouseOut={() => handleMouseOut('contactNav')} onMouseOver={() => handleMouseOver('contactNav')} className='logo' src={require('../Assets/contact.png')}/>
+                <img alt="contact" onClick={() =>scrollOnClick('contact-content')} onMouseOut={() => handleMouseOut('contactNav')} onMouseOver={() => handleMouseOver('contactNav')} className='logo' src={require('../../Assets/contact.png')}/>
             </div>
         </NavBarStyle>
     )

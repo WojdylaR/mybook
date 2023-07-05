@@ -4,7 +4,7 @@ function Vva() {
     return (
         <VvaStyle id="vva">
             <div id="vva-content" className="project">
-                VA VOIR AILLEURS
+                <h1>- Va Voir Ailleurs</h1>
             </div>
         </VvaStyle>
     )

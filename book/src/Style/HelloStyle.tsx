@@ -16,10 +16,6 @@ const HelloStyle = styled.div`
         font-family: "Evafiya";
         src: url("../Font/Evafiya-Font/Evafiya.ttf")
     }
-
-    .test{
-        font-family: Evafiya;
-    }
     .hello{
     }
 

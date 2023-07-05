@@ -4,7 +4,7 @@ function Ragetatt(){
     return(
         <RagetattStyle id="ragetatt">
             <div id="ragetatt-content" className="project">
-                RAGE TATT
+                <h1>- Rage Tattoo</h1>
             </div>
         </RagetattStyle>
     )

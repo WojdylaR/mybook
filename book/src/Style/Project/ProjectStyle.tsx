@@ -7,18 +7,23 @@ const ProjectStyle = styled.div`
     background-color: rgb(218, 169, 191);
     #projects-content{
         position: relative;
-        width: calc(100% - 160px);
-        height: calc(100% - 160px);
-        left: 80px;
-        top: 80px;
+        width: calc(100% - 200px);
+        height: calc(100% - 200px);
+        left: 100px;
+        top: 100px;
         display: flex;
         flex-direction: column;
         color: white;
     }
 
+    h1{
+        font-family: font2;
+        font-size: 400%;
+        letter-spacing: 5px;
+    }
 
     .project{
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
 `
 
