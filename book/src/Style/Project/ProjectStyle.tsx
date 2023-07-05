@@ -5,14 +5,16 @@ const ProjectStyle = styled.div`
     width: 100vw;
     height: 100vh;
     background-color: rgb(218, 169, 191);
+
+
     #projects-content{
         position: relative;
-        width: calc(100% - 200px);
-        height: calc(100% - 200px);
-        left: 100px;
-        top: 100px;
+        width: calc(100% - 180px);
+        height: calc(100% - 120px);
+        left: 60px;
+        top: 60px;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         color: white;
     }
 
@@ -25,6 +27,38 @@ const ProjectStyle = styled.div`
     .project{
         margin-bottom: 15px;
     }
+
+    .projectsPage{
+        position: relative;
+        height: 100%;
+        width: 45%;
+        border: 2px  solid white;
+        border-radius: 15px;
+
+    }
+
+    #vva{
+        transition-duration: 1s;
+    }
+
+    #vva:hover{
+
+        width: 200%;
+        
+    }
+
+    .content{
+        height: 0;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 0px;
+        border-radius: 13px;
+    }
+
+    #ragetatt:hover .content{
+    }
+
 `
 
 export default ProjectStyle
