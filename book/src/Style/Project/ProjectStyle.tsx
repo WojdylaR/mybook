@@ -32,23 +32,12 @@ const ProjectStyle = styled.div`
         position: relative;
         height: 100%;
         width: 45%;
-        border: 2px  solid white;
+        border: 2px  solid black;
         border-radius: 15px;
 
     }
-
-    #vva{
-        transition-duration: 1s;
-    }
-
-    #vva:hover{
-
-        width: 200%;
-        
-    }
-
     .content{
-        height: 0;
+        height: 100%;
         width: 100%;
         background-color: white;
         position: absolute;

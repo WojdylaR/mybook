@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 function Project(){
 
     return(
-        <ProjectStyle id="projects">
+        <ProjectStyle id="projects" >
             <div id="projects-content">
                 <Vva />
                 <Ragetatt />
