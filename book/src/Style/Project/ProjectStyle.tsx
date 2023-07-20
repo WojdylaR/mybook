@@ -18,36 +18,59 @@ const ProjectStyle = styled.div`
         color: white;
     }
 
-    h1{
-        font-family: font2;
-        font-size: 400%;
-        letter-spacing: 5px;
-    }
-
     .project{
         margin-bottom: 15px;
+        
     }
 
     .projectsPage{
         position: relative;
         height: 100%;
         width: 45%;
-        border: 2px  solid black;
+        border: 2px  solid white;
         border-radius: 15px;
-
+        background-color: white;
     }
+
     .content{
         height: 100%;
         width: 100%;
-        background-color: white;
+        background-color: rgb(235, 214, 190);
         position: absolute;
         top: 0px;
         border-radius: 13px;
+        transition: 0.5s;
     }
 
-    #ragetatt:hover .content{
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
     }
 
+
+    .project:hover .content{
+        opacity: 0.2;
+    }
+     .project:hover a{
+        opacity: 1;
+     }
+
+    .tittleContainer{
+        color: black;
+    }
+
+    .imgContainer{
+        position: relative;
+        width: 100%;
+        height: 70%;    
+    }
+
+    .imgProject{
+        width: 100%;
+    }
 `
 
 export default ProjectStyle
