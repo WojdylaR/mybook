@@ -21,7 +21,11 @@ const ProjectStyle = styled.div`
         font-weight: 400;
         font-size: 80px;
     }
-    
+
+    .tittle{
+
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
 
 
 `
