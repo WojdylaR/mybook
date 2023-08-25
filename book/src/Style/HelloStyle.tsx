@@ -12,10 +12,6 @@ const HelloStyle = styled.div`
     letter-spacing: 5px;
     font-family: evafiya;
 
-    @font-face {
-        font-family: "Evafiya";
-        src: url("../Font/Evafiya-Font/Evafiya.ttf")
-    }
     .hello{
     }
 

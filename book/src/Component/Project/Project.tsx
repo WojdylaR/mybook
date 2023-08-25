@@ -12,8 +12,7 @@ function Project(){
     return(
         <ProjectStyle id="projects" >
             <div id="projects-content">
-                <Vva />
-                <Ragetatt />
+                <h1>MY PROJECTS</h1>
             </div>
         </ProjectStyle>
     )
