@@ -12,17 +12,18 @@ function Home() {
 
     useEffect(() =>{
         ScrollTrigger.create({
-            trigger: "#projects",
-            start: "top top", 
-            end: "bottom 0px",
-            pin: "#projects-content"
-          });
-          ScrollTrigger.create({
             trigger: "#profil-page",
             start: "top top", 
             end: "bottom 0px",
             pin: "#profil-content"
         });
+        ScrollTrigger.create({
+            trigger: "#projects",
+            start: "top top", 
+            end: "bottom 0px",
+            pin: "#projects-content"
+          });
+          
          
         })
 

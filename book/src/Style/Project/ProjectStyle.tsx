@@ -15,11 +15,13 @@ const ProjectStyle = styled.div`
         top: 100px;
     }
 
-    h1{
+    .h1{
         color: white;
         font-family:  sans-serif;
         font-weight: 400;
         font-size: 80px;
+
+        text-shadow: rgb(50, 67, 89) 0.1em 0.1em 0.2em
     }
 
     .tittle{
@@ -27,6 +29,14 @@ const ProjectStyle = styled.div`
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
+    .underline{
+        position: relative;
+        top: 5px;
+        display: block;
+        width: 0px;
+        
+        border-top: solid 3px white;
+    }
 
 `
 
