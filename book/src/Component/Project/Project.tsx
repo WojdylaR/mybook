@@ -22,14 +22,12 @@ function Project(){
             {scrollTrigger:{
                 trigger:".h1",
                 start: "top bottom",
-                markers: true,
                 toggleActions:'restart none none reset',
             },y:0, opacity: 1, stagger:0.08, delay: 0.8,duration: 1, ease:'power4.out'}
             )
             gsap.to('.underline', {scrollTrigger:{
                 trigger:".underline",
                 start: "top bottom",
-                markers: true,
                 toggleActions:'restart none none reset',
             },delay: 0.4,duration: 1, width:'520px',})    
         },[]
