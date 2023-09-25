@@ -12,6 +12,7 @@ const NavBarStyle = styled.nav`
     justify-content: space-around;
     border-left: solid 1px white;
     color: white;
+    
     z-index: 2;
     opacity: 0;
 
