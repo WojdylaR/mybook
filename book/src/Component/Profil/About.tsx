@@ -13,6 +13,10 @@ function Profil(){
             trigger:'.h22',
             start: "top bottom",
             toggleActions:'restart none none reset',},opacity: 1, delay: 0.5, duration: 1})
+            gsap.fromTo('.img_profil', {left: "500px"}, {scrollTrigger:{
+                trigger:'.h22',
+                start: "top bottom",
+                toggleActions:'restart none none reset',},left: "0px", delay: 0.5,duration: 1.5})
     })
     return(
         <ProfilStyle id="profil-page">
@@ -29,7 +33,9 @@ function Profil(){
                 </div>
                 <div id="profil">
                     <div id="photo">
-                        Photo
+                        <div id="photo_container">
+                            <img className="img_profil" alt="Ronan Wojdyla" src={require("../../Assets/profil/img_profil.png")} />
+                        </div>
                     </div>
                     <div id="txt">
                         Txt
