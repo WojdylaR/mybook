@@ -9,10 +9,11 @@ const ProjectStyle = styled.div`
 
     #projects-content{
         position: relative;
-        width: calc(100% - 180px);
+        width: 100%;
         height: calc(100% - 200px);
-        left: 60px;
         top: 100px;
+        display: flex;
+        flex-direction: column;
     }
 
     .h1{
@@ -20,8 +21,12 @@ const ProjectStyle = styled.div`
         font-family:  sans-serif;
         font-weight: 400;
         font-size: 80px;
-
         text-shadow: rgb(50, 67, 89) 0.1em 0.1em 0.2em
+    }
+
+    .tittleSpan{
+        position: relative;
+        left: 120px;
     }
 
     .tittle{
@@ -38,6 +43,17 @@ const ProjectStyle = styled.div`
         border-top: solid 3px white;
     }
 
+    .projectContainer{
+        position: relative;
+        top: 100px;
+        border-top: 3px solid white;
+    }
+
+    .card:hover{
+        .tittle{
+            color: black;
+        }
+    }
 `
 
 export default ProjectStyle

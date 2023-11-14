@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import CompetenceCardStyle from "../../Style/CompetenceCardStyle"
+import {CompetenceCardStyle, CercleCardStyle } from "../../Style/CompetenceCardStyle"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger)
@@ -13,7 +13,7 @@ function Barre(p:any){
     )
 }
 
-function Card(props: any){
+export function BarreCard(props: any){
 
     useEffect(() =>{
         gsap.fromTo(`.startBarre${props.name}`, {width:0, color: 'black'}, {scrollTrigger:{
@@ -38,4 +38,24 @@ function Card(props: any){
     )
 }
 
-export default Card
+export function CercleCard (){
+
+    useEffect(()=>{
+        gsap.fromTo(`.hideAll`, {opacity: 1}, {scrollTrigger:{
+            trigger:`.hideAll`,
+            start: "top bottom",
+            toggleActions:'restart none none reset',},opacity: 1, delay: 0.5, duration: 1, left:'200px' })
+    })
+
+    return (
+        <CercleCardStyle>
+            <div className="circle">
+                <div className="startCircle"/>
+                <div className="hiddenCircle"/>
+                <div className="hideAll" />
+            </div>
+            <h2>Francais</h2>
+            
+        </CercleCardStyle>
+    )
+}

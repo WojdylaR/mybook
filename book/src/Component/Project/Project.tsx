@@ -7,6 +7,7 @@ import SplitType from 'split-type'
 import { ScrollTrigger } from "gsap/all";
 import Ragetatt from "./RageTatt";
 import ProfilStyle from "../../Style/ProfilStyle";
+import ProjectCard from "./ProjectCard";
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -38,7 +39,18 @@ function Project(){
     return(
         <ProjectStyle id="projects" >
             <div id="projects-content">
-               <div className="tittle"><span className="h1">MY PROJECT</span></div> <span className="underline"/>
+               <div className="tittleSpan">
+                    <div className="tittle">
+                        <span className="h1">
+                            MY PROJECT
+                        </span>
+                    </div>
+                    <span className="underline"/>
+                </div>
+                <div className="projectContainer">  
+                    <ProjectCard className="card" num="01" tittle="Va Voir Ailleurs"/>
+                    <ProjectCard num="02" tittle="Rage Tatoo"/>
+               </div>
             </div>
         </ProjectStyle>
     )

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import ProfilStyle from "../../Style/ProfilStyle";
-import Card from "./Card";
+import {BarreCard, CercleCard} from "./Card";
 import gsap from "gsap";
 
 function Profil(){
@@ -23,13 +23,14 @@ function Profil(){
             <div id="profil-content">
                 <div id="competence">
                     <h2 className="h22">FRONT-END</h2>
-                    <Card name="html" lvl="80"/>
-                    <Card name="css" lvl="80"/>
-                    <Card name="react" lvl="70"/>
-                    <Card name="gsap" lvl="50"/>
+                    <BarreCard name="html" lvl="80"/>
+                    <BarreCard name="css" lvl="80"/>
+                    <BarreCard name="react" lvl="70"/>
+                    <BarreCard name="gsap" lvl="50"/>
                     <h2 className="h21">OTHER</h2>
-                    <Card name="c" lvl="60"/>
-                    <Card name="cpp" lvl="55"/>
+                    <BarreCard name="c" lvl="60"/>
+                    <BarreCard name="cpp" lvl="55"/>
+                    <div className="langue"><CercleCard /></div>
                 </div>
                 <div id="profil">
                     <div id="photo">
