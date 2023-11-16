@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 const ProjectCardStyle = styled.div`
-       
     .all{
         position: relative;
     width: 100%;
     display: flex;
     border-bottom: 3px solid white;
     height: 150px;
-
     }
     cursor: pointer;
     .all:hover{
@@ -23,7 +21,6 @@ const ProjectCardStyle = styled.div`
       position: relative;
       background-color: rgb(86, 115, 154);
       color: white;
-      z-index: 0;
       width: 100vw;
     }
 
@@ -60,7 +57,6 @@ const ProjectCardStyle = styled.div`
       width: 100vw;
       color: black;
       background-color: white;
-      z-index: 0;
       clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0 100%);
       transition: 0.5s;
     }
