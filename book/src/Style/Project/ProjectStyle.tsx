@@ -49,11 +49,8 @@ const ProjectStyle = styled.div`
         border-top: 3px solid white;
     }
 
-    .card:hover{
-        .tittle{
-            color: black;
-        }
-    }
+
+
 `
 
 export default ProjectStyle

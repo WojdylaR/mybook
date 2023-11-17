@@ -3,12 +3,13 @@ import styled from "styled-components";
 const ProjectCardStyle = styled.div`
     .all{
         position: relative;
-    width: 100%;
-    display: flex;
-    border-bottom: 3px solid white;
-    height: 150px;
+        width: 100%;
+        display: flex;
+        border-bottom: 3px solid white;
+        height: 150px;
+        cursor: pointer;
     }
-    cursor: pointer;
+    
     .all:hover{
         .tittleWhite{
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
@@ -37,8 +38,7 @@ const ProjectCardStyle = styled.div`
         position: relative;
         top: 3px;
         display: block;
-        width: 100%;
-        
+        width: 100%;    
         border-top: solid 2px white;
     }
 
@@ -59,8 +59,16 @@ const ProjectCardStyle = styled.div`
       background-color: white;
       clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0 100%);
       transition: 0.5s;
+      pointer-events: none;
     }
-
+ 
+    .filterTemp{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index:-1;
+        top:0px;
+    }
 
     .tittleWhite .num{
         position: relative;
@@ -85,6 +93,26 @@ const ProjectCardStyle = styled.div`
         font-size: 500%;
         align-self: center;
         left: 100px;
+    }
+
+    .filter{
+        position:fixed;
+        top: -100px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter:blur(3px);
+        z-index: -1;
+    }
+
+
+    .projectExplain{
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
     }
 `
     
