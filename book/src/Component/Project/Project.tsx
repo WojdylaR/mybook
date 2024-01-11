@@ -9,6 +9,7 @@ import Ragetatt from "./RageTatt";
 import ProfilStyle from "../../Style/ProfilStyle";
 import ProjectCard from "./ProjectCard";
 import Echap from "./Echape";
+import ScndCard from "./scndCard"
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -45,6 +46,7 @@ function Project(){
           }
         }, []);
     
+    const [ActiveIndex, setIsAtiveIndex] = useState(-1)
 
     return(
         <ProjectStyle id="projects" >
@@ -57,9 +59,10 @@ function Project(){
                     </div>
                     <span className="underline"/>
                 </div>
-                <div ref={d2} className="projectContainer">  
-                    <ProjectCard d={d} num="01" tittle="Va Voir Ailleurs"></ProjectCard>
-                    <ProjectCard d={d} num="02" tittle="Rage Tatoo"></ProjectCard> 
+                <div ref={d2} className="projectContainer">
+                    <ScndCard onShow={()=> ActiveIndex == 0 ? setIsAtiveIndex(-1) : setIsAtiveIndex(0)} activeIndex={ActiveIndex} num="0" title="VVA"></ScndCard>
+                    <ScndCard onShow={()=> ActiveIndex == 1 ? setIsAtiveIndex(-1) : setIsAtiveIndex(1)} activeIndex={ActiveIndex} num="1" title="Rage"></ScndCard>
+                    <ScndCard onShow={()=> ActiveIndex == 2 ? setIsAtiveIndex(-1) : setIsAtiveIndex(2)} activeIndex={ActiveIndex} num="2" title="IN PROCESS"></ScndCard>
                </div>
             </div>
         </ProjectStyle>

@@ -40,10 +40,12 @@ function ProjectCard(props:any){
             gsap.to('.all' + num,{zIndex: 1, borderTop: '3px solid white'})
             gsap.to('.all' + num,{y: topTemp, delay: 0.7, duration: 0.3})
             gsap.to('.filterTemp', {delay: 1.2, zIndex:-1})
-            gsap.to('.all' + num,{height: '100vh', delay: 0.9, duration: 0.3})
+            gsap.to('.all' + num,{height: '100vh', delay: 0.9, duration: 0.3, background: 'red'})
+            gsap.to('.h2' + num,{opacity: 0, delay: 1.2, duration: 0.3})
             setIsOpen(false)
         }else{
             document.body.style.overflow = "auto"
+            gsap.to('.h2' + num,{opacity: 1, delay: 0, duration: 0.3})
             gsap.to('.all' + num,{height: '150px', delay: 0, duration: 0.3})
             gsap.to('.all' + num,{y: 0, delay: 0.2, duration: 0.3})
             gsap.to('.all' + num,{zIndex: 1, borderTop: '0px solid white', delay:0.5})

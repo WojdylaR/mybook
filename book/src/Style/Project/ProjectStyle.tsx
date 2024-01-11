@@ -44,10 +44,19 @@ const ProjectStyle = styled.div`
     }
 
     .projectContainer{
+        display: flex;
+        justify-content: center;
         position: relative;
-        top: 100px;
+        top: 125px;
+        height: 450px;
         border-top: 3px solid white;
+        border-bottom: 3px solid white;
     }
+
+
+
+
+
 
 
 
