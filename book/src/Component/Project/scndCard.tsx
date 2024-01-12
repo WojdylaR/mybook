@@ -3,9 +3,6 @@ import styled from "styled-components";
 import gsap from "gsap";
 
 
-
-
-
 export default function ScndCard(props:any){
     const [isOpen, setIsOpen] = useState(false)
 
@@ -55,6 +52,9 @@ export default function ScndCard(props:any){
         </ScndCardSyle>
     )
 }
+
+
+
 
 const ScndCardSyle = styled.div`
     display: flex;
