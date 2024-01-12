@@ -19,6 +19,10 @@ export default function ImageContainer(){
                             <img alt="car" className="logoContact" src={require('../../Assets/Contact/car.png')} />
                             Permis B
                         </div>
+                        <div className="gridItem" style={{fontSize: '80%'}}>
+                            <img alt="car" className="logoContact" src={require('../../Assets/Contact/mail.png')} />
+                            ronan.wojdyla@hotmail.fr
+                        </div>
                     </p>
                 </div>
         </ImageContainerStyle>
@@ -34,7 +38,7 @@ const ImageContainerStyle = styled.div`
     justify-content:center;
 
     img{
-        width: 100%;
+        width: 100vw;
         height: 70vh;
         object-fit: cover;
     }
@@ -71,7 +75,7 @@ const ImageContainerStyle = styled.div`
     
     h2{
         position: relative;
-        top: -25px;
+        top: -15px;
         font-family: Arial, Helvetica, sans-serif;
     }
 
@@ -79,6 +83,6 @@ const ImageContainerStyle = styled.div`
         position: relative;
         width: 20px;
         height: 20px;
-        margin-right: 10px;
+        margin-right: 7px;
     }
 `

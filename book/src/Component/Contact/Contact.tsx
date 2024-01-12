@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ImageContainer from "./ImageContainer";
+import FormContact from "./FormContact";
 
 
 
@@ -8,8 +9,8 @@ function Contact(){
         <ContactStyle>
             <div id="contact-content">
                 <ImageContainer />
+                <FormContact />
             </div>
-
         </ContactStyle>
     )
 }
@@ -20,7 +21,6 @@ export default Contact
 
 const ContactStyle = styled.div`
     position: relative;
-    height: 100vh;
     width: 100vw;
     background-color:  rgb(218, 169, 191);
     #contact-content{
@@ -30,6 +30,7 @@ const ContactStyle = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         color: white;
     }
 `
