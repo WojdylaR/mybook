@@ -30,7 +30,8 @@ export default function FormContact(){
 const FormContactStyle = styled.div`
     position: relative;
     background-color: black;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
 
@@ -43,7 +44,17 @@ const FormContactStyle = styled.div`
     }
 
     .grille{
+        position:relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        justify-content: space-around;
     }
+
+    .grid_item{
+        width: 150px;
+        height: 100px;
+    }
+
 
     h2{
         display: flex;

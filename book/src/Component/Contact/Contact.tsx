@@ -6,10 +6,9 @@ import FormContact from "./FormContact";
 
 function Contact(){
     return (
-        <ContactStyle>
+        <ContactStyle id="contact">
             <div id="contact-content">
                 <ImageContainer />
-                <FormContact />
             </div>
         </ContactStyle>
     )
@@ -22,6 +21,7 @@ export default Contact
 const ContactStyle = styled.div`
     position: relative;
     width: 100vw;
+    height: 100vh;
     background-color:  rgb(218, 169, 191);
     #contact-content{
         position: relative;

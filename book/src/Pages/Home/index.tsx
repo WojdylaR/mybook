@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react'
 import Profil from '../../Component/Profil/About'
+import FormContact from '../../Component/Contact/FormContact'
 gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
@@ -23,7 +24,12 @@ function Home() {
             end: "bottom 0px",
             pin: "#projects-content"
           });
-          
+          ScrollTrigger.create({
+            trigger: "#contact",
+            start: "top top", 
+            end: "bottom 0px",
+            pin: "#contact-content"
+          });
          
         })
 
@@ -33,6 +39,7 @@ function Home() {
             <Profil />
             <Project />
             <Contact />
+            <FormContact />
         </div>
     )
 }

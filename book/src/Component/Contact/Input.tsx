@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export default function Input(props:any){
     return(
-        <InputStyle> 
+        <InputStyle className="grid_item"> 
             <div className="input-container">
                 <input type="text" id="input" required={true}/>
                 <label htmlFor="input" className="label">{props.children}</label>
@@ -13,10 +13,13 @@ export default function Input(props:any){
 }
 
 const InputStyle = styled.div`
+    position: relative;
+    width: 100%;
+
     .input-container {
         position: relative;
         margin: 50px auto;
-        width: 200px;
+        width: 100%;
     }
 
     .input-container input[type="text"] {
@@ -27,6 +30,7 @@ const InputStyle = styled.div`
         padding: 5px 0;
         background-color: transparent;
         outline: none;
+        color: white;
     }
 
     .input-container .label {
@@ -42,7 +46,7 @@ const InputStyle = styled.div`
     .input-container input[type="text"]:valid ~ .label {
         top: -20px;
         font-size: 16px;
-        color: #333;
+        color: #646464;
     }
 
     .input-container .underline {
@@ -58,6 +62,6 @@ const InputStyle = styled.div`
 
     .input-container input[type="text"]:focus ~ .underline,
     .input-container input[type="text"]:valid ~ .underline {
-        transform: scaleX(1);
+       
     }
 `
