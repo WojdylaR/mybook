@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ImageContainer from "./ImageContainer";
-import FormContact from "./FormContact";
 
 
 

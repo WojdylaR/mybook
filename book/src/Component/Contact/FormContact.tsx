@@ -8,18 +8,14 @@ export default function FormContact(){
             <div className="cadre">
                 <h2>Me Contacter</h2>
                 <div className="grille">
-                    <div className="grid_item">
                         <Input >Prenom</Input>
-                    </div>
-                    <div className="grid_item">
                         <Input >Nom</Input>
-                    </div>
-                    <div className="grid_item">
                         <Input >Mail</Input>
-                    </div>
-                    <div className="grid_item">
                         <Input >Numéro</Input>
-                    </div>
+                </div>
+                <div>
+                    <textarea className="champTxt" />
+                    <button >Envoyer</button>
                 </div>
             </div>
         </FormContactStyle>
@@ -34,6 +30,7 @@ const FormContactStyle = styled.div`
     height: 100vh;
     display: flex;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 
     .cadre{
         position: relative;
@@ -46,18 +43,35 @@ const FormContactStyle = styled.div`
     .grille{
         position:relative;
         display: grid;
-        grid-template-columns: repeat(auto-fill, 200px);
+        grid-template-columns: repeat(auto-fill, 150px);
         justify-content: space-around;
+        margin-bottom: 100px;
+        gap: 30px;
     }
 
     .grid_item{
         width: 150px;
-        height: 100px;
+        height: 50px;
     }
 
 
     h2{
+        font-size: 200%;
+        color: white;
         display: flex;
         justify-content: center;
+    }
+
+    .champTxt{
+        position: relative;
+        width: 100%;
+        
+        height: 200px;
+    }
+    
+    button{
+        width: 505px;
+        height: 50px;
+    
     }
 `
