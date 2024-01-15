@@ -6,7 +6,6 @@ import {gsap} from 'gsap'
 import SplitType from 'split-type'
 import { ScrollTrigger } from "gsap/all";
 import Ragetatt from "./RageTatt";
-import ProfilStyle from "../../Style/ProfilStyle";
 import ProjectCard from "./ProjectCard";
 import Echap from "./Echape";
 import ScndCard from "./scndCard"
