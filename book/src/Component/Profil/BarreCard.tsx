@@ -12,7 +12,7 @@ export function BarreCard(p:any){
 const BarreCardStyle = styled.div`
     position: relative;
     width: 80%;
-    height: 15px;
+    height: 10px;
     background-color: #8a8a8a;
     border-radius: 5px;
 

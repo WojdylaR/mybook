@@ -16,6 +16,7 @@ const PhotoStyle = styled.div`
     left: 2.5vw;
     display: flex;
     justify-content: center;
+    border-radius: 15px;
 
     img.profilImg{
         position: relative;

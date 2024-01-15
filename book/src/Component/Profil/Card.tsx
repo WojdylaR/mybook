@@ -33,7 +33,7 @@ const CompetenceCardStyle = styled.div`
 
     img{
         position: relative;
-        width: 50%;
+        height: 45%;
     }
 
     h3{
