@@ -1,16 +1,30 @@
 import styled from "styled-components";
+import { gsap } from "gsap/gsap-core";
+import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
 
 export default function Photo(){
+
+    useEffect(()=>{
+        gsap.to('.profilImg', {scrollTrigger:{
+            trigger:'.profilImg',
+            start:'bottom bottom'},
+            x:-500,
+            duration: 1,
+            delay: 1
+        })})
+
     return(
         <PhotoStyle>
-            <img alt="RonanWojdyla" className='profilImg' src={require('../../Assets/profil/img_profil.png')} />
+            <div className="cache" />
+            <span ><img alt="RonanWojdyla" className='profilImg' src={require('../../Assets/profil/img_profil.png')} /></span>
         </PhotoStyle>
     )
 }
  
 const PhotoStyle = styled.div`
     position: relative;
-    height: 40%;
+    height: 35vh;
     background: white;
     width: calc(100% - 2.5vw);
     left: 2.5vw;
@@ -18,8 +32,26 @@ const PhotoStyle = styled.div`
     justify-content: center;
     border-radius: 15px;
 
+    .cache{
+        position: absolute;
+        height: 35vh;
+        width: 35vh;
+        border-radius: 50%;
+        background-color: rgb(109, 91, 130);
+
+    }
+
+    span{
+        position: relative;
+        height: 35vh;
+        width: 35vh;
+        clip-path: circle(50%);
+    }
+
     img.profilImg{
         position: relative;
         height: 100%;
+        left: 500px;
+        clip-path: circle(50%);
     }
 `
