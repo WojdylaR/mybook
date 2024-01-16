@@ -8,7 +8,7 @@ export default function Photo(){
     useEffect(()=>{
         gsap.to('.profilImg', {scrollTrigger:{
             trigger:'.profilImg',
-            start:'bottom bottom'},
+            start:'center bottom'},
             x:-500,
             duration: 1,
             delay: 1
@@ -25,7 +25,7 @@ export default function Photo(){
 const PhotoStyle = styled.div`
     position: relative;
     height: 35vh;
-    background: white;
+    background: #8B95B0;
     width: calc(100% - 2.5vw);
     left: 2.5vw;
     display: flex;
@@ -37,7 +37,7 @@ const PhotoStyle = styled.div`
         height: 35vh;
         width: 35vh;
         border-radius: 50%;
-        background-color: rgb(109, 91, 130);
+        background-color: #B2B9CA;
 
     }
 

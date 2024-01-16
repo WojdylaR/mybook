@@ -10,7 +10,8 @@ export function BarreCard(p:any){
             start:"top bottom",},
             width: `${p.p}%`,
             delay: 1,
-            duration: 1})
+            duration: Math.random() + 0.5,
+            })
         })
 
 

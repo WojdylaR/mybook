@@ -25,7 +25,7 @@ export default function FormContact(){
 
 const FormContactStyle = styled.div`
     position: relative;
-    background-color: black;
+    background-color: #F2EBE5;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -57,7 +57,7 @@ const FormContactStyle = styled.div`
 
     h2{
         font-size: 200%;
-        color: white;
+        color: #2B262D;
         display: flex;
         justify-content: center;
     }

@@ -4,7 +4,7 @@ const ProjectStyle = styled.div`
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(86, 115, 154);
+    background-color: #9F496E;
 
 
     #projects-content{

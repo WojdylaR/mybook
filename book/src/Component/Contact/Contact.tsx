@@ -21,7 +21,7 @@ const ContactStyle = styled.div`
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color:  rgb(218, 169, 191);
+    background-color:  #2B262D;
     #contact-content{
         position: relative;
         width: 100%;

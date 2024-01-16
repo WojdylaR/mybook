@@ -31,7 +31,7 @@ const ProfilStyle = styled.section`
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(109, 91, 130);
+    background-color: #647295;
 
     #profil-content{
         position: relative;

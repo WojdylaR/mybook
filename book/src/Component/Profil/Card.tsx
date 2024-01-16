@@ -22,14 +22,14 @@ export default function CardCompetence(props: any){
 
 
 const CompetenceCardStyle = styled.div`
-    background-color: white;
+    background-color: #D8DCE5;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    border: solid 2px black;
-
+    border: solid 2px rgb(72, 72, 72);
+    border-radius: 10px;
 
     img{
         position: relative;
@@ -39,5 +39,6 @@ const CompetenceCardStyle = styled.div`
     h3{
         font-family: Arial, Helvetica, sans-serif;
         font-size: 150%;
+        color: black;
     }
 `

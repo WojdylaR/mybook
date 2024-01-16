@@ -26,18 +26,18 @@ const InputStyle = styled.div`
         font-size: 20px;
         width: 100%;
         border: none;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid #2B262D;
         padding: 5px 0;
         background-color: transparent;
         outline: none;
-        color: white;
+        color: #2B262D;
     }
 
     .input-container .label {
         position: absolute;
         top: 0;
         left: 0;
-        color: #ccc;
+        color: #2B262D;
         transition: all 0.3s ease;
         pointer-events: none;
     }
