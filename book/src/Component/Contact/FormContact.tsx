@@ -6,11 +6,16 @@ export default function FormContact(){
     return(
         <FormContactStyle >
             <div className="text">
-fzeafkazn
+                <h2 className="tittleText">Un Projet? Une idée?</h2>
+                <h3>Vous êtes un particulier ? Un Professionel ?</h3>
+                <p>
+                    N'hésitez pas a me contacter par mail, via le formulaire ou bien sur linkedin.<br/>
+                    Mes autres projets, hors web, sont également disponible sur mon GitHub !
+                </p>
             </div>
             
             <div className="cadre">
-                <h2>Me Contacter</h2>
+                <h2 className="tittleContact">Me Contacter</h2>
                 <div className="grille">
                         <Input >Prenom</Input>
                         <Input >Nom</Input>
@@ -39,7 +44,6 @@ const FormContactStyle = styled.div`
 
     .text{
         width: 500px;
-        background-color: red;
         margin-right: 250px;
     }
 
@@ -73,8 +77,28 @@ const FormContactStyle = styled.div`
         left: 10px;
     }
 
+    .tittleText{
+        font-size: 250%;
+        color: #2B262D;
+        letter-spacing: 1px;
+    }
 
-    h2{
+    h3{
+        color: #464147;
+        white-space: nowrap;
+        font-size: 150%;
+        margin-bottom: 30px;
+        
+        
+    }
+
+    p{
+        color: #605C62;
+        font-size: 125%;
+        line-height: 27px;
+    }
+
+    .tittleContact{
         font-size: 200%;
         color: #2B262D;
         display: flex;
