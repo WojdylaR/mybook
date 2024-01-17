@@ -5,6 +5,10 @@ import Input from "./Input"
 export default function FormContact(){
     return(
         <FormContactStyle >
+            <div className="text">
+fzeafkazn
+            </div>
+            
             <div className="cadre">
                 <h2>Me Contacter</h2>
                 <div className="grille">
@@ -13,7 +17,7 @@ export default function FormContact(){
                         <Input >Mail</Input>
                         <Input >Numéro</Input>
                 </div>
-                <div>
+                <div className="send">
                     <textarea className="champTxt" />
                     <button >Envoyer</button>
                 </div>
@@ -31,6 +35,13 @@ const FormContactStyle = styled.div`
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+
+    .text{
+        width: 500px;
+        background-color: red;
+        margin-right: 250px;
+    }
 
     .cadre{
         position: relative;
@@ -38,6 +49,9 @@ const FormContactStyle = styled.div`
         display: flex;
         justify-content: center;
         flex-direction: column;
+        height: 60%;
+        background-color: #ffffff;
+        border-radius: 10px;
     }
 
     .grille{
@@ -54,6 +68,11 @@ const FormContactStyle = styled.div`
         height: 50px;
     }
 
+    .send{
+        position: relative;
+        left: 10px;
+    }
+
 
     h2{
         font-size: 200%;
@@ -64,14 +83,16 @@ const FormContactStyle = styled.div`
 
     .champTxt{
         position: relative;
-        width: 100%;
-        
+        width: 475px;
         height: 200px;
     }
     
     button{
-        width: 505px;
+        width: 480px;
         height: 50px;
-    
+    }
+
+    button:hover{
+        cursor: pointer;
     }
 `
