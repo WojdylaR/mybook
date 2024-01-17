@@ -12,9 +12,13 @@ export default function FormContact(){
                     N'hésitez pas a me contacter par mail, via le formulaire ou bien sur linkedin.<br/>
                     Mes autres projets, hors web, sont également disponible sur mon GitHub !
                 </p>
+                <div className="logoContainer">
+                    <a href="https://www.linkedin.com/in/ronan-wojdyla-07aa3920a/"><img alt="linkedin" className="logo" src={require("../../Assets/Contact/linkedin.png")} /></a>
+                    <a href="https://github.com/WojdylaR"><img alt="github" className="logo" src={require("../../Assets/Contact/github.png")} /></a>
+                </div>
             </div>
             
-            <div className="cadre">
+            <div className="cadre" id="contactForm">
                 <h2 className="tittleContact">Me Contacter</h2>
                 <div className="grille">
                         <Input >Prenom</Input>
@@ -45,6 +49,24 @@ const FormContactStyle = styled.div`
     .text{
         width: 500px;
         margin-right: 250px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logoContainer{
+        position: relative;
+        width: 125px;
+        align-self: center;
+        display: flex;
+        padding-top: 4px;
+        border-radius: 5px;
+        justify-content: space-around;
+        background-color: white;
+        align-items: center;
+    }
+
+    .logo{
+        width: 50px;
     }
 
     .cadre{
@@ -96,6 +118,7 @@ const FormContactStyle = styled.div`
         color: #605C62;
         font-size: 125%;
         line-height: 27px;
+        margin-bottom: 35px;
     }
 
     .tittleContact{

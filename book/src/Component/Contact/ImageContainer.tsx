@@ -1,6 +1,14 @@
 import styled from "styled-components";
+import { gsap } from "gsap/gsap-core";
+import { ScrollToPlugin } from 'gsap/all'
+gsap.registerPlugin(ScrollToPlugin)
 
 export default function ImageContainer(){
+
+    function onClick(){
+        gsap.to(window, {duration: 1, scrollTo: `#contactForm`});
+    }
+
     return(
         <ImageContainerStyle>
              <img alt="MapLyon" src={require('../../Assets/Contact/map.png')} />
@@ -24,6 +32,9 @@ export default function ImageContainer(){
                             ronan.wojdyla@hotmail.fr
                         </div>
                     </p>
+                    <button>
+                        <span onClick={onClick}>Contact</span>
+                    </button>
                 </div>
         </ImageContainerStyle>
     )
@@ -63,6 +74,7 @@ const ImageContainerStyle = styled.div`
         justify-content: center;
         grid-template-columns: repeat(auto-fill, 170px);
         grid-gap: 40px;
+        margin-bottom: 25px;
     }
 
     .gridItem{
@@ -85,4 +97,48 @@ const ImageContainerStyle = styled.div`
         height: 20px;
         margin-right: 7px;
     }
-`
+
+    button {
+        display: flex;
+        border-radius: 4px;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        color: black;
+        height: 37px;
+        text-align: center;
+        font-size: 17px;
+        padding: 16px;
+        width: 130px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+
+    }
+
+    button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    button span:after {
+        content: '»';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -15px;
+        transition: 0.5s;
+    }
+
+    button:hover span {
+        padding-right: 15px;
+    }
+
+    button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+    `
