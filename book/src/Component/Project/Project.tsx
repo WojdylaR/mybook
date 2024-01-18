@@ -53,7 +53,6 @@ function Project(){
                             MY PROJECT
                         </span>
                     </div>
-                    <span className="underline"/>
                 </div>
                 <div ref={d2} className="projectContainer">
                     <ScndCard onShow={()=> ActiveIndex === VvaInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(VvaInterface.num)} activeIndex={ActiveIndex} Interface={VvaInterface}/>
@@ -95,10 +94,11 @@ const ProjectStyle = styled.div`
     .tittleSpan{
         position: relative;
         left: 120px;
+        width: 50%;
     }
 
     .tittle{
-
+        position: relative;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 

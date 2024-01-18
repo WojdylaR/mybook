@@ -32,8 +32,8 @@ export default function ImageContainer(){
                             ronan.wojdyla@hotmail.fr
                         </div>
                     </p>
-                    <button>
-                        <span onClick={onClick}>Contact</span>
+                    <button onClick={onClick}>
+                        <span >Contact</span>
                     </button>
                 </div>
         </ImageContainerStyle>
