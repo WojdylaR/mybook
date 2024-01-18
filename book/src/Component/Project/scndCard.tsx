@@ -58,7 +58,13 @@ export default function ScndCard({ activeIndex, Interface, onShow}: { activeInde
                     <img alt="img_website" className="imgWebsite" src={require(`../../Assets/project/${Interface.img}`)}/>
                 </div>
                 <div className="textContainer">
-
+                    <div className="tittle"><h3>{Interface.name}</h3></div>
+                    <div className="description">
+                        {Interface.description}
+                    </div>
+                    <div className="link">
+                        <a href={Interface.link}><button>Visiter</button></a>
+                    </div>
                 </div>
             </div> : <TittleStyle>{name}</TittleStyle>}
             
@@ -87,6 +93,7 @@ const ScndCardSyle = styled.div`
         width: 100%;
         height: 100%;
         display: flex;
+        background-color: #DBBBC9;
     }
 
     .imgWebsite{
@@ -104,13 +111,60 @@ const ScndCardSyle = styled.div`
         position: relative;
         width: 66%;
         height: 100%;
-        background-color: red;
     }
 
     .textContainer{
         position: relative;
         width: 34%;
         height: 100%;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tittle{
+        position: relative;
+        align-self: center;
+        border-bottom: 2px solid black;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        height: 20%;
+        align-items: center;
+        font-family:  sans-serif;
+        font-size: 150%;
+    }
+
+    .description{
+        position: relative;
+        width: 100%;
+        height: 60%;
+        width: 80%;
+        left: 10%;
+        line-height: 25px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 125%;
+        display: flex;
+        align-items: center;
+    }
+
+    .link{
+        position: relative;
+        width: 80%;
+        height: 20%;
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        left: 10%;
+        border-top: 2px solid black
+    }
+
+    button{
+        width: 150px;
+        height: 50px;
+        font-size: 110%;
+        cursor: pointer;
     }
 
 `
