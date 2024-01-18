@@ -1,14 +1,11 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import ProjectStyle from "../../Style/Project/ProjectStyle";
-import Profil from "../Profil/About";
-import Vva from "./Vva";
 import {gsap} from 'gsap'
 import SplitType from 'split-type'
 import { ScrollTrigger } from "gsap/all";
-import Ragetatt from "./RageTatt";
-import ProjectCard from "./ProjectCard";
-import Echap from "./Echape";
 import ScndCard from "./scndCard"
+import styled from "styled-components";
+import { RageInterface, VvaInterface } from "./ClassProject";
+import Ragetatt from "./RageTatt";
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -59,9 +56,8 @@ function Project(){
                     <span className="underline"/>
                 </div>
                 <div ref={d2} className="projectContainer">
-                    <ScndCard onShow={()=> ActiveIndex == 0 ? setIsAtiveIndex(-1) : setIsAtiveIndex(0)} activeIndex={ActiveIndex} num="0" title="VVA"></ScndCard>
-                    <ScndCard onShow={()=> ActiveIndex == 1 ? setIsAtiveIndex(-1) : setIsAtiveIndex(1)} activeIndex={ActiveIndex} num="1" title="Rage"></ScndCard>
-                    <ScndCard onShow={()=> ActiveIndex == 2 ? setIsAtiveIndex(-1) : setIsAtiveIndex(2)} activeIndex={ActiveIndex} num="2" title="IN PROCESS"></ScndCard>
+                    <ScndCard onShow={()=> ActiveIndex === VvaInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(VvaInterface.num)} activeIndex={ActiveIndex} Interface={VvaInterface}/>
+                    <ScndCard onShow={()=> ActiveIndex === RageInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(RageInterface.num)} activeIndex={ActiveIndex} Interface={RageInterface}/>
                </div>
             </div>
         </ProjectStyle>
@@ -69,3 +65,68 @@ function Project(){
 }
 
 export default Project
+
+
+
+const ProjectStyle = styled.div`
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #9F496E;
+
+
+    #projects-content{
+        position: relative;
+        width: 100%;
+        height: calc(100% - 200px);
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .h1{
+        color: white;
+        font-family:  sans-serif;
+        font-weight: 400;
+        font-size: 80px;
+        text-shadow: rgb(50, 67, 89) 0.1em 0.1em 0.2em
+    }
+
+    .tittleSpan{
+        position: relative;
+        left: 120px;
+    }
+
+    .tittle{
+
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .underline{
+        position: relative;
+        top: 5px;
+        display: block;
+        width: 0px;
+        
+        border-top: solid 3px white;
+    }
+
+    .projectContainer{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 125px;
+        height: 450px;
+        border-top: 3px solid white;
+        border-bottom: 3px solid white;
+
+    }
+
+
+
+
+
+
+
+
+`
