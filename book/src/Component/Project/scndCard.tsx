@@ -98,8 +98,10 @@ const ScndCardSyle = styled.div`
 
     .imgWebsite{
         position: relative;
-        height: 100%;
         width: 100%;
+        object-fit: cover;
+        object-position: top; 
+        height: 100%;
     }
 
     &:hover{
@@ -142,7 +144,7 @@ const ScndCardSyle = styled.div`
         width: 80%;
         left: 10%;
         line-height: 25px;
-        color: white;
+        color: #212121;
         font-family: sans-serif;
         font-size: 125%;
         display: flex;

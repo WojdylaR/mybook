@@ -17,7 +17,7 @@ export const VvaInterface:ProjectInterface = {
 export const RageInterface:ProjectInterface = {
     name: "RageTattoo",
     num:1,
-    img: "vva.png",
+    img: "rage.png",
     description: "React, Typescript",
     link: "http://ragetatt.com/"
 }
