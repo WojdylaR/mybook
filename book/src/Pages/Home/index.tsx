@@ -1,4 +1,3 @@
-import HelloStyle from '../../Style/HelloStyle'
 import Hello from '../../Component/Hello/Hello'
 import Project from '../../Component/Project/Project'
 import Contact from '../../Component/Contact/Contact'

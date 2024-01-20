@@ -40,5 +40,9 @@ const CompetenceCardStyle = styled.div`
         font-family: Arial, Helvetica, sans-serif;
         font-size: 150%;
         color: black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #B2B9CA;
     }
 `
