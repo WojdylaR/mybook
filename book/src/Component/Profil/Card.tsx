@@ -14,7 +14,7 @@ export default function CardCompetence(props: any){
         <CompetenceCardStyle className="grid-item">
             <img alt={props.children} src={require(`../../Assets/profil/logo/${props.children}.png`)}/>
             <h3>{props.children}</h3>
-            <BarreCard p={props.lvl} />
+            <div className="barre"><BarreCard p={props.lvl} /></div>
         </CompetenceCardStyle>
     )
 }
@@ -41,8 +41,18 @@ const CompetenceCardStyle = styled.div`
         font-size: 150%;
         color: black;
         width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .barre{
+        position: relative;
+        width: 100%;
         display: flex;
         justify-content: center;
-        background-color: #B2B9CA;
+        
     }
 `

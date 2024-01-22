@@ -47,10 +47,15 @@ const FormContactStyle = styled.div`
     align-items: center;
 
     .text{
-        width: 500px;
+        width: 600px;
         margin-right: 250px;
         display: flex;
         flex-direction: column;
+        background-color: #ffffff;
+        border-radius: 10px;
+
+        box-sizing: border-box;
+        padding:20px;
     }
 
     .logoContainer{

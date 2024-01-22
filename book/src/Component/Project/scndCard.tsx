@@ -127,7 +127,6 @@ const ScndCardSyle = styled.div`
     .tittle{
         position: relative;
         align-self: center;
-        border-bottom: 2px solid black;
         width: 80%;
         display: flex;
         justify-content: center;
@@ -141,8 +140,12 @@ const ScndCardSyle = styled.div`
         position: relative;
         width: 100%;
         height: 60%;
-        width: 80%;
-        left: 10%;
+        width: 100%;
+        background-color: #ffe8f2;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        box-sizing: border-box;
+        padding:20px;
         line-height: 25px;
         color: #212121;
         font-family: sans-serif;
@@ -159,7 +162,6 @@ const ScndCardSyle = styled.div`
         justify-content:  center;
         align-items: center;
         left: 10%;
-        border-top: 2px solid black
     }
 
     button{
