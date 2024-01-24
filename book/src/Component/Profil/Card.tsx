@@ -29,7 +29,7 @@ const CompetenceCardStyle = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
     border: solid 2px rgb(72, 72, 72);
-    border-radius: 10px;
+    border-radius: 4px;
 
     img{
         position: relative;
@@ -37,7 +37,7 @@ const CompetenceCardStyle = styled.div`
     }
 
     h3{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: lustria;
         font-size: 150%;
         color: black;
         width: 100%;

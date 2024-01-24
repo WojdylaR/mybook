@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Home from "./Pages/Home";
-import { GlobalStyle } from "./Style/Global";
 import {Routes, Route} from "react-router-dom"
 import PageStyle from "./Style/PageStyle";
 import './Font/font.css'
@@ -13,7 +12,6 @@ function App() {
 
   return (
     <div>
-      <GlobalStyle />
       <PageStyle>
       <NavBar />
       <Routes >

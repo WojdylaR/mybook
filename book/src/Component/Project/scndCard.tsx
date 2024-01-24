@@ -132,7 +132,7 @@ const ScndCardSyle = styled.div`
         justify-content: center;
         height: 20%;
         align-items: center;
-        font-family:  sans-serif;
+        font-family:  lustria;
         font-size: 150%;
     }
 
@@ -148,8 +148,8 @@ const ScndCardSyle = styled.div`
         padding:20px;
         line-height: 25px;
         color: #212121;
-        font-family: sans-serif;
-        font-size: 125%;
+        font-family: josefin;
+        font-size: 145%;
         display: flex;
         align-items: center;
     }

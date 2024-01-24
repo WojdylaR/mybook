@@ -113,6 +113,7 @@ const FormContactStyle = styled.div`
     h3{
         color: #464147;
         white-space: nowrap;
+        font-family: lustria;
         font-size: 150%;
         margin-bottom: 30px;
         
@@ -122,6 +123,7 @@ const FormContactStyle = styled.div`
     p{
         color: #605C62;
         font-size: 125%;
+        font-family: josefin;
         line-height: 27px;
         margin-bottom: 35px;
     }

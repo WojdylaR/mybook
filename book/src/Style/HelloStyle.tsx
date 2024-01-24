@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import '../Font/Evafiya-Font/Evafiya.ttf'
 
 const HelloStyle = styled.div`
     position: relative;

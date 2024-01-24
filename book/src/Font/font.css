@@ -6,3 +6,11 @@
     font-family: font2;
     src: url('./coolvetica/coolvetica\ condensed\ rg.otf');
 }
+@font-face{
+    font-family: lustria;
+    src: url('./Lustria/Lustria-Regular.ttf')
+}
+@font-face {
+    font-family: josefin;
+    src: url('./Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
