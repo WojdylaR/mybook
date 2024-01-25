@@ -42,13 +42,12 @@ const FormContactStyle = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
 
     .text{
-        width: 600px;
-        margin-right: 250px;
+        width: 33vw;
         display: flex;
         flex-direction: column;
         background-color: #ffffff;
@@ -76,13 +75,16 @@ const FormContactStyle = styled.div`
 
     .cadre{
         position: relative;
-        width: 500px;
+        width: 33vw;
         display: flex;
         justify-content: center;
         flex-direction: column;
+
         height: 60%;
         background-color: #ffffff;
         border-radius: 10px;
+        box-sizing: border-box;
+        padding:80px;
     }
 
     .grille{
@@ -101,7 +103,10 @@ const FormContactStyle = styled.div`
 
     .send{
         position: relative;
-        left: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
     }
 
     .tittleText{
@@ -137,16 +142,32 @@ const FormContactStyle = styled.div`
 
     .champTxt{
         position: relative;
-        width: 475px;
+        width: 90%;
         height: 200px;
     }
     
     button{
-        width: 480px;
+        width: 90%;
         height: 50px;
     }
 
     button:hover{
         cursor: pointer;
+    }
+
+    @media (max-width: 1250px){
+        flex-direction: column;
+        position: relative;
+        top: 100px;
+
+        .text{
+            margin-bottom: 25px;
+            width: 80vw;
+        }
+
+        .cadre{
+            width: 80vw;
+            padding: 0;
+        }
     }
 `
