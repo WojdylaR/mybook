@@ -31,4 +31,13 @@ const CompetenceStyle = styled.div`
     .grid-item{
         height: 175px;
     }
+
+    @media (max-width: 1250px) {
+        gap: 10px;
+        justify-content: space-around;
+        position: relative;
+        top: 25px;
+        width: 80vw;
+        margin-bottom: 150px;
+    }
 `

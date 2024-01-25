@@ -50,4 +50,21 @@ const DescriptionStyle = styled.div`
         border-radius: 7px;
         background-color: #B2B9CA;
     }
+
+    @media (max-width: 1250px){
+        left: 0%;
+        width: 50vw;
+        height: 35vw;
+        top: 0%;
+    }
+
+    @media (max-width: 950px){
+        .tittle{
+            display: none;
+        }
+
+        .description{
+            height: 80%;
+        }
+    }
 `

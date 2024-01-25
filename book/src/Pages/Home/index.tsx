@@ -6,11 +6,15 @@ import { ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react'
 import Profil from '../../Component/Profil/About'
 import FormContact from '../../Component/Contact/FormContact'
+import useWindowSize from '../../Hook/useScreenSize'
 gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
 
-    useEffect(() =>{
+    const width = useWindowSize().width
+
+    useEffect(() =>{ if (width && width > 1250)
+        {
         ScrollTrigger.create({
             trigger: "#profil-page",
             start: "top top", 
@@ -28,9 +32,8 @@ function Home() {
             start: "top top", 
             end: "bottom 0px",
             pin: "#contact-content"
-          });
-         
-        })
+          });}
+        }, [])
 
     return (
         <div>

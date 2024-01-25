@@ -48,10 +48,31 @@ const PhotoStyle = styled.div`
         clip-path: circle(50%);
     }
 
-    img.profilImg{
+    .profilImg{
         position: relative;
         height: 100%;
         left: 500px;
         clip-path: circle(50%);
     }
+
+    @media (max-width: 1250px){
+        left: 0%;
+        height: 35vw;
+        width: 35vw;
+
+        .profilImg{
+            position: relative;
+        }
+
+        span{
+            height: 35vw;
+            width: 35vw;
+        }
+
+        .cache{
+            height: 35vw;
+            width: 35vw;
+        }
+    }
+
 `

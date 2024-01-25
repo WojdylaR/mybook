@@ -49,8 +49,28 @@ const ProfilStyle = styled.section`
     }
 
     .rightSide{
+        display: flex;
+        flex-direction: column;
         position: relative;
         width: 35%;
         height: 100%;
     }
+
+    @media (max-width: 1250px) {
+        height: auto;
+
+        #profil-content{
+            height: auto;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+
+        }
+
+        .rightSide{
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+}
     `
