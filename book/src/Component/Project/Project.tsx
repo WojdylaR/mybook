@@ -11,11 +11,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 function Project(){
 
-    const d1 = useRef<HTMLHeadingElement>(null);
-    const d2 = useRef<HTMLHeadingElement>(null);
-
-    const [d, setD] = useState(0)
-
     useEffect(()=> {
         const txtSplit = SplitType.create('.h1', {types: 'chars'})
         
@@ -29,18 +24,12 @@ function Project(){
         },[]
     )
 
-    useLayoutEffect(() => {
-        if (d1 && d1.current && d2 && d2.current) {
-            
-            setD(d1.current.offsetTop + d2.current.offsetTop)
-          }
-        }, []);
     
     const [ActiveIndex, setIsAtiveIndex] = useState(-1)
 
     return(
         <ProjectStyle id="projects" >
-            <div ref={d1} id="projects-content">
+            <div id="projects-content">
                <div className="tittleSpan">
                     <div className="tittle">
                         <span className="h1">
@@ -48,7 +37,7 @@ function Project(){
                         </span>
                     </div>
                 </div>
-                <div ref={d2} className="projectContainer">
+                <div className="projectContainer">
                     <ScndCard onShow={()=> ActiveIndex === VvaInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(VvaInterface.num)} activeIndex={ActiveIndex} Interface={VvaInterface}/>
                     <ScndCard onShow={()=> ActiveIndex === RageInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(RageInterface.num)} activeIndex={ActiveIndex} Interface={RageInterface}/>
                </div>
@@ -87,11 +76,13 @@ const ProjectStyle = styled.div`
 
     .tittleSpan{
         position: relative;
-        left: 120px;
-        width: 50%;
+        left: 0px;
+        width: 100%;
     }
 
     .tittle{
+        display: flex;
+        justify-content: center;
         position: relative;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
@@ -116,6 +107,19 @@ const ProjectStyle = styled.div`
 
     }
 
+    @media (max-width: 1000px){
+        height: auto;
+
+        .projectContainer{
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            margin-bottom: 450px;
+        }
+
+        #projects-content{
+        }
+    }
 
 
 

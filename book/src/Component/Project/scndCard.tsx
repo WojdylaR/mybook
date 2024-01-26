@@ -2,40 +2,48 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { ProjectInterface } from "./ClassProject";
+import useWindowSize from "../../Hook/useScreenSize";
 
 
 export default function ScndCard({ activeIndex, Interface, onShow}: { activeIndex :number, Interface: ProjectInterface, onShow:()=> void} ){
     const [isOpen, setIsOpen] = useState(false)
     const num = Interface.num
     const name = Interface.name
+    const widthScreen = useWindowSize().width
 
 
     function onClick(){
 
-        gsap.to('.containerScndCard', {width: 200, duration: 0.1})
+        if (widthScreen && widthScreen >= 1000) {gsap.to('.containerScndCard', {width: 200, duration: 0.1})}
+        else{gsap.to('.containerScndCard', {height: 200, duration: 0.1})}
+
         onShow()
         gsap.to(window, {duration: 0.2, scrollTo: '#projects',});
         
-        if (isOpen === true){
+        if (isOpen === true && widthScreen && widthScreen > 1000){
             gsap.to('.containerScndCard' + num, {width: 200, duration: 0.1})
             setIsOpen(false)
         }
     }
 
     function onMouseEnter(){
-        if (!isOpen){
+        if (!isOpen && widthScreen && widthScreen > 1000){
             gsap.to('.containerScndCard' + num, {width: 250, duration: 0.1})
         }
     }
 
     function onMouseLeave(){
-        if (!isOpen){
+        if (!isOpen && widthScreen && widthScreen > 1000){
             gsap.to('.containerScndCard' + num, {width: 200, duration: 0.1})
         }
     }
 
     function Open(){
-        gsap.to('.containerScndCard' + num, {width: 900, duration: 0.2, delay: 0.2})
+        if (widthScreen && widthScreen > 1000){
+            gsap.to('.containerScndCard' + num, {width: 900, duration: 0.2, delay: 0.2})}
+        else{
+            gsap.to('.containerScndCard' + num, {height: 600, duration: 0.2, delay: 0.2})
+        }
         gsap.to('.imgWebsit' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.txt' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.Button' + num, {opacity: 1, duration: 0.2, delay: 0.5})
@@ -49,7 +57,7 @@ export default function ScndCard({ activeIndex, Interface, onShow}: { activeInde
     ,[activeIndex])
 
     return(
-        <ScndCardSyle style={{borderLeft: num==0 ? '2px solid black' : ''}} className={`containerScndCard containerScndCard` + num}
+        <ScndCardSyle style={{borderLeft: num == 0 && widthScreen && widthScreen > 1000 ? '2px solid black' : '', borderTop: num == 0 && widthScreen && widthScreen < 1000 ? '0px' : ''}} className={`containerScndCard containerScndCard` + num}
                         onMouseLeave={onMouseLeave}
                         onMouseEnter={onMouseEnter}
                         onClick={()=> onClick()}>
@@ -179,6 +187,52 @@ const ScndCardSyle = styled.div`
         cursor: pointer;
     }
 
+    @media (max-width: 1000px){
+        height: 200px;
+        width: 100%;
+        border-top: 2px black solid;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    @media (max-width: 750px){
+        .isOpen{
+            flex-direction: column;
+            display: flex;
+        }
+
+        .imgContainer{
+            width: 100%;
+            height: 66%;
+        }
+
+        .textContainer{
+        flex-direction: row;
+        height: 34%;
+        width: 100%;
+    }
+
+    .tittle{
+        width: 25%;
+        height: 100%;
+    }
+
+    .description{
+        width: 50%;
+        height: 100%;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+
+    .link{
+        width: 25%;
+        height: 100%;
+        left: 0%;
+    }
+
+    }
 `
 
 
@@ -187,5 +241,15 @@ const TittleStyle = styled.div`
     transform: rotate(180deg);
     font-family: 'Courier New', Courier, monospace;
     font-size: 150%;
+
+    @media (max-width: 1000px){
+        writing-mode: horizontal-tb;;
+        transform: rotate(0);
+        
+    }
+
+    
+
+    
 
 `

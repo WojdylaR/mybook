@@ -7,7 +7,7 @@ export default function FormContact(){
         <FormContactStyle >
             <div className="text">
                 <h2 className="tittleText">Un Projet? Une idée?</h2>
-                <h3>Vous êtes un particulier ? Un Professionel ?</h3>
+                <h3>Vous êtes un particulier ?<span className="nowrap"> Un Professionel ?</span></h3>
                 <p>
                     N'hésitez pas a me contacter par mail, via le formulaire ou bien sur linkedin.<br/>
                     Mes autres projets, hors web, sont également disponible sur mon GitHub !
@@ -117,12 +117,15 @@ const FormContactStyle = styled.div`
 
     h3{
         color: #464147;
-        white-space: nowrap;
         font-family: lustria;
         font-size: 150%;
         margin-bottom: 30px;
         
         
+    }
+
+    .nowrap{
+        white-space: nowrap;
     }
 
     p{
@@ -159,7 +162,7 @@ const FormContactStyle = styled.div`
         flex-direction: column;
         position: relative;
         top: 100px;
-
+        margin-bottom: 200px;
         .text{
             margin-bottom: 25px;
             width: 80vw;
@@ -168,6 +171,7 @@ const FormContactStyle = styled.div`
         .cadre{
             width: 80vw;
             padding: 0;
+            padding-bottom: 25px;
         }
     }
 `
