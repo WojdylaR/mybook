@@ -7,7 +7,11 @@ export default function Description(){
                 <h3>A Propos De Moi:</h3>
             </div>
             <div className="description">
-
+                <p> Développeur web junior, j'aime apprendre et surtout monter en compétance.<br />
+                    Je suis avant tout mordu et passionné
+                    d'informatique et de nouvelles
+                    technologies.
+                </p>
             </div>
         </DescriptionStyle>
     )
@@ -43,12 +47,22 @@ const DescriptionStyle = styled.div`
 
     .description{
         position: relative;
+        display: flex;
+        align-items: center;
         height: 58%;
         width: 80%;
         top: 10%;
         left: 10%;
         border-radius: 7px;
         background-color: #B2B9CA;
+    }
+
+    p{
+        font-family: lustria;
+        font-size: 1.5vw;
+        line-height: 30px;
+        box-sizing: border-box;
+        padding:20px;
     }
 
     @media (max-width: 1250px){
@@ -65,6 +79,15 @@ const DescriptionStyle = styled.div`
 
         .description{
             height: 80%;
+        }
+
+        p{
+            font-size: 1em;
+        }
+
+        @media (max-width: 650px){
+            width: 100vw;
+            height: 50vw;
         }
     }
 `

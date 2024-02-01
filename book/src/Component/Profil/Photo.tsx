@@ -75,4 +75,8 @@ const PhotoStyle = styled.div`
         }
     }
 
+    @media (max-width: 650px){
+            display: none;
+        }
+
 `

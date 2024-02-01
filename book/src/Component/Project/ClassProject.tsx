@@ -18,6 +18,6 @@ export const RageInterface:ProjectInterface = {
     name: "RageTattoo",
     num:1,
     img: "rage.png",
-    description: "React, Typescript",
+    description: "Jeune tatoueuse Lyonnaise, Rage sait se démarquer grace a son style gothique et horrifique",
     link: "http://ragetatt.com/"
 }
