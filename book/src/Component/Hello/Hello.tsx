@@ -24,10 +24,10 @@ function Hello(){
                 <span className="letter">U</span>
                 <span className="letter">R</span>
             <div className="welcome">
-                Binvenue sur mon PorteFolio
+                Binvenue sur mon<br />PorteFolio
             </div>
             <div className="scroll">
-                <span>Scroll to Continue</span>
+                <span>Scroll pour Continuer</span>
                 <span><img alt="arrow" className="arrow" src={require('../../Assets/arrow.png')}/></span>
             </div>
         </HelloStyle>
