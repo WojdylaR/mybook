@@ -51,6 +51,7 @@ const PhotoStyle = styled.div`
     .profilImg{
         position: relative;
         height: 100%;
+        width: 100%;
         left: 500px;
         clip-path: circle(50%);
     }
