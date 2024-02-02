@@ -31,7 +31,7 @@ const DescriptionStyle = styled.div`
     .tittle{
         position: relative;
         background-color: #B2B9CA;
-        height: 12%;
+        height: 17%;
         width: 80%;
         left: 10%;
         top: 10%;
@@ -39,9 +39,9 @@ const DescriptionStyle = styled.div`
         justify-content: center;
         align-items: center;
         border-radius: 7px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 125%;
-        margin-bottom: 10%;
+        font-family: evafiya;
+        font-size: 250%;
+        margin-bottom: 5%;
         color: black;
     }
 

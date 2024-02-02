@@ -67,6 +67,14 @@ const ImageContainerStyle = styled.div`
         background-color: rgba(50 ,50, 50, 0.97)
     }
 
+    @media (max-width: 550px){
+        .cadre{
+            width: 100%;
+            border-radius: 0;
+            height: auto;
+        }
+    }
+
     p{
         width:80%;
         position: relative;

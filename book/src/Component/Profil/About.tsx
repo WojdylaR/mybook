@@ -66,6 +66,11 @@ const ProfilStyle = styled.section`
 
         }
 
+        .leftSide{
+            left: 0;
+            width: 100%;
+        }
+
         .rightSide{
             width: 100%;
             flex-direction: row;

@@ -25,11 +25,10 @@ const CompetenceStyle = styled.div`
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(auto-fill, 175px);
-    gap: 30px;
+    gap: 10px;
     width: calc(100% - 2.5vh);
-    
     .grid-item{
-        height: 175px;
+        height: 17vh;
     }
 
     @media (max-width: 1250px) {
@@ -39,5 +38,12 @@ const CompetenceStyle = styled.div`
         top: 25px;
         width: 80vw;
         margin-bottom: 150px;
+        width: 100%;
+        gap: 1px;
+
+        .grid-item{
+        height: 150px;
+
+    }
     }
 `

@@ -32,7 +32,7 @@ function Project(){
                <div className="tittleSpan">
                     <div className="tittle">
                         <span className="h1">
-                            MY PROJECT
+                            Mes Projets
                         </span>
                     </div>
                 </div>
