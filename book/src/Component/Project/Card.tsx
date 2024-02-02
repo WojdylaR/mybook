@@ -5,7 +5,7 @@ import { ProjectInterface } from "./ClassProject";
 import useWindowSize from "../../Hook/useScreenSize";
 
 
-export default function ScndCard({ activeIndex, Interface, onShow}: { activeIndex :number, Interface: ProjectInterface, onShow:()=> void} ){
+export default function Card({ activeIndex, Interface, onShow}: { activeIndex :number, Interface: ProjectInterface, onShow:()=> void} ){
     const [isOpen, setIsOpen] = useState(false)
     const num = Interface.num
     const name = Interface.name
@@ -14,36 +14,39 @@ export default function ScndCard({ activeIndex, Interface, onShow}: { activeInde
 
     function onClick(){
 
-        if (widthScreen && widthScreen >= 1000) {gsap.to('.containerScndCard', {width: 200, duration: 0.1})}
-        else{gsap.to('.containerScndCard', {height: 200, duration: 0.1})}
+
+        gsap.to('.containerScndCard', {height: 125, duration: 0.1})
 
         onShow()
         gsap.to(window, {duration: 0.2, scrollTo: '#projects',});
         
-        if (isOpen === true && widthScreen && widthScreen > 1000){
-            gsap.to('.containerScndCard' + num, {width: 200, duration: 0.1})
+        if (isOpen === true ){
+            gsap.to('.containerScndCard' + num, {height: 125, duration: 0.1})
             setIsOpen(false)
         }
     }
 
     function onMouseEnter(){
         if (!isOpen && widthScreen && widthScreen > 1000){
-            gsap.to('.containerScndCard' + num, {width: 250, duration: 0.1})
+            gsap.to('.containerScndCard' + num, {height: 150, duration: 0.1})
         }
     }
 
     function onMouseLeave(){
         if (!isOpen && widthScreen && widthScreen > 1000){
-            gsap.to('.containerScndCard' + num, {width: 200, duration: 0.1})
+            gsap.to('.containerScndCard' + num, {height: 125, duration: 0.1})
         }
     }
 
     function Open(){
-        if (widthScreen && widthScreen > 1000){
-            gsap.to('.containerScndCard' + num, {width: 900, duration: 0.2, delay: 0.2})}
-        else{
-            gsap.to('.containerScndCard' + num, {height: 600, duration: 0.2, delay: 0.2})
+        const container = document.getElementById("projectContainer");
+        const element = document.querySelector('.containerScndCard' + num)
+        if (container && element){
+            container.prepend(element);
         }
+
+        gsap.to('.containerScndCard' + num, { height: 450, duration: 0.2, delay: 0.2})
+        
         gsap.to('.imgWebsit' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.txt' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.Button' + num, {opacity: 1, duration: 0.2, delay: 0.5})
@@ -57,7 +60,7 @@ export default function ScndCard({ activeIndex, Interface, onShow}: { activeInde
     ,[activeIndex])
 
     return(
-        <ScndCardSyle style={{borderLeft: num == 0 && widthScreen && widthScreen > 1000 ? '2px solid black' : '', borderTop: num == 0 && widthScreen && widthScreen < 1000 ? '0px' : ''}} className={`containerScndCard containerScndCard` + num}
+        <ScndCardSyle className={`containerScndCard containerScndCard` + num}
                         onMouseLeave={onMouseLeave}
                         onMouseEnter={onMouseEnter}
                         onClick={()=> onClick()}>
@@ -88,13 +91,13 @@ export default function ScndCard({ activeIndex, Interface, onShow}: { activeInde
 const ScndCardSyle = styled.div`
     display: flex;
     position: relative;
-    width: 200px;
-    height: 100%;
+    width: 100%;
+    height: 125px;
     align-items: center;
     justify-content: center;
     background-color: white;
     transition: 0.2s;
-    border-right: solid 2px black;
+    border-top: solid 2px black;
 
     
     .txt{
@@ -106,7 +109,7 @@ const ScndCardSyle = styled.div`
         width: 100%;
         height: 100%;
         display: flex;
-        background-color: #DBBBC9;
+        background-color: #777A8F;
     }
 
     .imgWebsite{
@@ -156,7 +159,7 @@ const ScndCardSyle = styled.div`
         width: 100%;
         height: 60%;
         width: 100%;
-        background-color: #ffe8f2;
+        background-color: #BBBDC7;
         border-top: 2px solid black;
         border-bottom: 2px solid black;
         box-sizing: border-box;
@@ -237,17 +240,8 @@ const ScndCardSyle = styled.div`
 
 
 const TittleStyle = styled.div`
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
     font-family: 'Courier New', Courier, monospace;
     font-size: 150%;
-
-    @media (max-width: 1000px){
-        writing-mode: horizontal-tb;;
-        transform: rotate(0);
-        
-    }
-
     
 
     

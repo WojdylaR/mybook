@@ -21,3 +21,19 @@ export const RageInterface:ProjectInterface = {
     description: "Jeune tatoueuse Lyonnaise, Rage sait se démarquer grace a son style gothique et horrifique",
     link: "http://ragetatt.com/"
 }
+
+export const NoProjectInterface1:ProjectInterface = {
+    name: "En Cours...",
+    num:2,
+    img: "rage.png",
+    description: "Rajoutez votre projet ici, pour cela, n'hésitez a me contacter!",
+    link: ""
+}
+
+export const NoProjectInterface2:ProjectInterface = {
+    name: "En Cours...",
+    num:3,
+    img: "rage.png",
+    description: "Rajoutez votre projet ici, pour cela, n'hésitez a me contacter!",
+    link: ""
+}

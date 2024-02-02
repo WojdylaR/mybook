@@ -38,7 +38,7 @@ export default function FormContact(){
 
 const FormContactStyle = styled.div`
     position: relative;
-    background-color: #F2EBE5;
+    background-color: #f2e9e4;
     width: 100vw;
     height: 100vh;
     display: flex;

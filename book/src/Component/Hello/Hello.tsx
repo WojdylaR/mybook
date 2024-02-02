@@ -24,7 +24,7 @@ function Hello(){
                 <span className="letter">U</span>
                 <span className="letter">R</span>
             <div className="welcome">
-                Binvenue sur mon<br />PorteFolio
+                Bienvenue sur mon<br />Portfolio
             </div>
             <div className="scroll">
                 <span>Scroll pour Continuer</span>

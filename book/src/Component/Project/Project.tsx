@@ -2,10 +2,9 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {gsap} from 'gsap'
 import SplitType from 'split-type'
 import { ScrollTrigger } from "gsap/all";
-import ScndCard from "./scndCard"
+import Card from "./Card"
 import styled from "styled-components";
-import { RageInterface, VvaInterface } from "./ClassProject";
-import Ragetatt from "./RageTatt";
+import { NoProjectInterface1, NoProjectInterface2, RageInterface, VvaInterface } from "./ClassProject";
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -37,9 +36,11 @@ function Project(){
                         </span>
                     </div>
                 </div>
-                <div className="projectContainer">
-                    <ScndCard onShow={()=> ActiveIndex === VvaInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(VvaInterface.num)} activeIndex={ActiveIndex} Interface={VvaInterface}/>
-                    <ScndCard onShow={()=> ActiveIndex === RageInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(RageInterface.num)} activeIndex={ActiveIndex} Interface={RageInterface}/>
+                <div id="projectContainer">
+                    <Card onShow={()=> ActiveIndex === VvaInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(VvaInterface.num)} activeIndex={ActiveIndex} Interface={VvaInterface}/>
+                    <Card onShow={()=> ActiveIndex === RageInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(RageInterface.num)} activeIndex={ActiveIndex} Interface={RageInterface}/>
+                    <Card onShow={()=> ActiveIndex === NoProjectInterface1.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(NoProjectInterface1.num)} activeIndex={ActiveIndex} Interface={NoProjectInterface1}/>
+                    <Card onShow={()=> ActiveIndex === NoProjectInterface2.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(NoProjectInterface2.num)} activeIndex={ActiveIndex} Interface={NoProjectInterface2}/>
                </div>
             </div>
         </ProjectStyle>
@@ -54,24 +55,22 @@ const ProjectStyle = styled.div`
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #9F496E;
+    background-color: #22223b;
 
 
     #projects-content{
         position: relative;
         width: 100%;
-        height: calc(100% - 200px);
-        top: 100px;
+        top: 50px;
         display: flex;
+
         flex-direction: column;
     }
-
     .h1{
         color: white;
-        font-family:  sans-serif;
+        font-family: evafiya;
         font-weight: 400;
         font-size: 80px;
-        text-shadow: rgb(50, 67, 89) 0.1em 0.1em 0.2em
     }
 
     .tittleSpan{
@@ -87,40 +86,18 @@ const ProjectStyle = styled.div`
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
-    .underline{
-        position: relative;
-        top: 5px;
-        display: block;
-        width: 0px;
-        
-        border-top: solid 3px white;
-    }
-
-    .projectContainer{
+    #projectContainer{
         display: flex;
         justify-content: center;
         position: relative;
-        top: 125px;
+        top: 50px;
         height: 450px;
-        border-top: 3px solid white;
-        border-bottom: 3px solid white;
 
-    }
-
-    @media (max-width: 1000px){
-        height: auto;
-
-        .projectContainer{
-            width: 100%;
+        width: 100%;
             height: auto;
             flex-direction: column;
-            margin-bottom: 450px;
-        }
 
-        #projects-content{
-        }
     }
-
 
 
 

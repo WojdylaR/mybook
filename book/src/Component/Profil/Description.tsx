@@ -7,7 +7,7 @@ export default function Description(){
                 <h3>A Propos De Moi:</h3>
             </div>
             <div className="description">
-                <p> Développeur web junior, j'aime apprendre et surtout monter en compétance.<br />
+                <p> Développeur web junior, j'aime apprendre et surtout monter en compétences.<br />
                     Je suis avant tout mordu et passionné
                     d'informatique et de nouvelles
                     technologies.
