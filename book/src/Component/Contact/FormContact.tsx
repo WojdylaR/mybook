@@ -27,8 +27,8 @@ export default function FormContact(){
                     Mes autres projets, hors web, sont également disponibles sur mon GitHub !
                 </p>
                 <div className="logoContainer">
-                    <a href="https://www.linkedin.com/in/ronan-wojdyla-07aa3920a/"><img alt="linkedin" className="logo" src={require("../../Assets/Contact/linkedin.png")} /></a>
-                    <a href="https://github.com/WojdylaR"><img alt="github" className="logo" src={require("../../Assets/Contact/github.png")} /></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/ronan-wojdyla-07aa3920a/"><img alt="linkedin" className="logo" src={require("../../Assets/Contact/linkedin.png")} /></a>
+                    <a target="_blank" href="https://github.com/WojdylaR"><img alt="github" className="logo" src={require("../../Assets/Contact/github.png")} /></a>
                 </div>
             </div>
             

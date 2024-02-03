@@ -25,7 +25,7 @@ export default function Photo(){
 const PhotoStyle = styled.div`
     position: relative;
     height: 35vh;
-    background: #8B95B0;
+    background: #777A8F;
     width: calc(100% - 2.5vw);
     left: 2.5vw;
     display: flex;

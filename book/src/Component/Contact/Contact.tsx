@@ -11,12 +11,12 @@ gsap.registerPlugin(ScrollTrigger)
 function Contact(){
 
     useEffect(()=> {
-        const txtSplit = SplitType.create('.h1', {types: 'chars'})
+        const txtSplit = SplitType.create('.h1Contact', {types: 'chars'})
         
         gsap.fromTo(txtSplit.chars, 
             {y:100, opacity: 0}, 
             {scrollTrigger:{
-                trigger:".h1",
+                trigger:".h1Contact",
                 start: "top bottom",
             },y:0, opacity: 1, stagger:0.08, delay: 0.8,duration: 1, ease:'power4.out'}
             )    
@@ -30,7 +30,7 @@ function Contact(){
             <div id="contact-content">
             <div className="tittleSpan">
                     <div className="tittle">
-                        <span className="h1">
+                        <span className="h1Contact">
                             Me Contacter
                         </span>
                     </div>
@@ -61,7 +61,7 @@ const ContactStyle = styled.div`
         color: white;
     }
 
-    .h1{
+    .h1Contact{
         color: white;
         font-family: evafiya;
         font-size: 80px;

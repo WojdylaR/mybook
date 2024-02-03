@@ -80,7 +80,7 @@ export default function Card({ activeIndex, Interface, onShow}: { activeIndex :n
                         <span className={`txt txt` + num}>{Interface.description}</span>
                     </div>
                     <div className="link">
-                        <a href={Interface.link}><button className={`Button Button` + num}>Visiter</button></a>
+                        <a target="_blank" href={Interface.link}><button className={`Button Button` + num}>Visiter</button></a>
                     </div>
                 </div>
             </div> : <TittleStyle>{name}</TittleStyle>}

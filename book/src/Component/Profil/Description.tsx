@@ -21,7 +21,7 @@ const DescriptionStyle = styled.div`
     position: relative;
     height: calc(60% - 2.5vh);
     width: calc(100% - 2.5vw);
-    background-color: #8B95B0;
+    background-color: #777A8F;
     left: 2.5vw;
     top: 2.5vh;
     border-radius: 15px;
@@ -30,7 +30,7 @@ const DescriptionStyle = styled.div`
 
     .tittle{
         position: relative;
-        background-color: #B2B9CA;
+        background-color: #BBBDC7;
         height: 17%;
         width: 80%;
         left: 10%;
@@ -54,7 +54,7 @@ const DescriptionStyle = styled.div`
         top: 10%;
         left: 10%;
         border-radius: 7px;
-        background-color: #B2B9CA;
+        background-color: #BBBDC7;
     }
 
     p{

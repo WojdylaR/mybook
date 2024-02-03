@@ -22,7 +22,7 @@ export default function CardCompetence(props: any){
 
 
 const CompetenceCardStyle = styled.div`
-    background-color: #D8DCE5;
+    background-color: #BBBDC7;
     display: flex;
     flex-direction: column;
     align-items: center;
