@@ -78,7 +78,8 @@ const DescriptionStyle = styled.div`
         }
 
         .description{
-            height: 80%;
+            top: 0%;
+            height: 100%;
         }
 
         p{
