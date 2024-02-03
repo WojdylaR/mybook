@@ -29,6 +29,7 @@ const CompetenceStyle = styled.div`
     width: calc(100% - 2.5vh);
     .grid-item{
         height: 17vh;
+
     }
 
     @media (max-width: 1250px) {
@@ -45,5 +46,8 @@ const CompetenceStyle = styled.div`
         height: 150px;
 
     }
+    }
+    @media (max-width:390px){
+        grid-template-columns: repeat(auto-fill, 150px);
     }
 `
