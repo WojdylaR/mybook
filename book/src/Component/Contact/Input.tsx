@@ -14,7 +14,6 @@ export default function Input(props:any){
 
 const InputStyle = styled.div`
     position: relative;
-    width: 100%;
 
     .input-container {
         position: relative;

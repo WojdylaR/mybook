@@ -98,17 +98,18 @@ const FormContactStyle = styled.div`
         background-color: #ffffff;
         border-radius: 10px;
         box-sizing: border-box;
-        padding-left:80px;
-        padding-right:80px;
+        padding-left:40px;
+        padding-right:40px;
         padding-top:40px;
         padding-bottom:40px;
     }
 
     .grille{
+        box-sizing: border-box;
         position:relative;
         display: grid;
         grid-template-columns: repeat(auto-fill, 150px);
-        justify-content: space-around;
+        justify-content: center;
         margin-bottom: 100px;
         gap: 30px;
     }

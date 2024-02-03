@@ -107,7 +107,10 @@ const ProjectStyle = styled.div`
         padding-bottom: 200px;
         
     }
-
+    @media (max-width: 600px){
+        .h1{
+            font-size: 60px;
+        }}
 
 
 

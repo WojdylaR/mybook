@@ -194,6 +194,10 @@ const ScndCardSyle = styled.div`
 
     @media (max-width: 750px){
 
+        .isOpen{
+            flex-direction: column;
+        }
+
         .imgContainer{
             width: 100%;
             height: 66%;
@@ -203,28 +207,47 @@ const ScndCardSyle = styled.div`
         flex-direction: row;
         height: 34%;
         width: 100%;
+        }
+
+       .tittle{
+            width: 25%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .description{
+            width: 50%;
+            height: 100%;
+            border-top: 0px;
+            border-bottom: 0px;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        .link{
+            width: 25%;
+            height: 100%;
+            left: 0%;
+        }
+
+        button{
+            width: 100px;
+        }
     }
 
-    .tittle{
-        width: 25%;
-        height: 100%;
-    }
+    @media (max-width: 500px){
+        .description{
+            display: none;
+        }
 
-    .description{
-        width: 50%;
-        height: 100%;
-        border-top: 0px;
-        border-bottom: 0px;
-        border-left: 2px solid black;
-        border-right: 2px solid black;
-    }
+        .link{
+            width: 50%;
+            border-left: 2px solid black;
+        }
 
-    .link{
-        width: 25%;
-        height: 100%;
-        left: 0%;
-    }
-
+        .tittle{
+            width: 50%;
+        }
     }
 `
 

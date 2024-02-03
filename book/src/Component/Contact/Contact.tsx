@@ -26,6 +26,8 @@ function Contact(){
 
     return (
         <ContactStyle id="contact">
+            
+            <div id="contact-content">
             <div className="tittleSpan">
                     <div className="tittle">
                         <span className="h1">
@@ -33,7 +35,6 @@ function Contact(){
                         </span>
                     </div>
                 </div>
-            <div id="contact-content">
                 <ImageContainer />
             </div>
         </ContactStyle>
@@ -63,13 +64,13 @@ const ContactStyle = styled.div`
     .h1{
         color: white;
         font-family: evafiya;
-        font-weight: 400;
         font-size: 80px;
     }
 
     .tittleSpan{
         position: absolute;
         left: 0px;
+        top: 0px;
         width: 100%;
         height: 15vh;
         display: flex;
@@ -81,6 +82,11 @@ const ContactStyle = styled.div`
         display: flex;
         justify-content: center;
         position: relative;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    @media (max-width: 600px){
+        .h1{
+            font-size: 60px;
+        }
     }
 `
