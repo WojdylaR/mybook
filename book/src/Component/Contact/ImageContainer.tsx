@@ -13,7 +13,7 @@ export default function ImageContainer(){
         <ImageContainerStyle>
              <img alt="MapLyon" src={require('../../Assets/Contact/map.png')} />
                 <div className="cadre">
-                    <h2>Where I live ?</h2>
+                    <h2>Où suis-je ?</h2>
                     <p>
                         <div className="gridItem">
                             <img alt="location" className="logoContact" src={require('../../Assets/Contact/location.png')} />

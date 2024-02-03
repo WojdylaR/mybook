@@ -190,19 +190,7 @@ const ScndCardSyle = styled.div`
         cursor: pointer;
     }
 
-    @media (max-width: 1000px){
-        height: 200px;
-        width: 100%;
-        border-top: 2px black solid;
-        border-left: 0px;
-        border-right: 0px;
-    }
-
     @media (max-width: 750px){
-        .isOpen{
-            flex-direction: column;
-            display: flex;
-        }
 
         .imgContainer{
             width: 100%;
