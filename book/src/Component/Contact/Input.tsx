@@ -4,7 +4,7 @@ export default function Input(props:any){
     return(
         <InputStyle className="grid_item"> 
             <div className="input-container">
-                <input type="text" id="input" required={true}/>
+                <input type="text" id="input" name={props.name} required={true}/>
                 <label htmlFor="input" className="label">{props.children}</label>
                 <div className="underline"></div>
             </div>
@@ -18,7 +18,6 @@ const InputStyle = styled.div`
 
     .input-container {
         position: relative;
-        margin: 50px auto;
         width: 100%;
     }
 

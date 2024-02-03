@@ -57,6 +57,13 @@ const ProjectStyle = styled.div`
     height: 100vh;
     background-color: #22223b;
 
+    .containerScndCard2{
+        order: -1;
+    }
+
+    .txt{
+        opacity: 0;
+    }
 
     #projects-content{
         position: relative;

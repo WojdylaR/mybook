@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useReducer, useRef, useState } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { ProjectInterface } from "./ClassProject";
@@ -10,7 +10,14 @@ export default function Card({ activeIndex, Interface, onShow}: { activeIndex :n
     const num = Interface.num
     const name = Interface.name
     const widthScreen = useWindowSize().width
+    
+    const ref = useRef<HTMLHeadingElement>(null)
 
+    useLayoutEffect(() => {
+        if (ref && ref.current) {
+            console.log(ref.current.offsetTop);
+          }
+        }, [ref]);
 
     function onClick(){
 
@@ -40,17 +47,15 @@ export default function Card({ activeIndex, Interface, onShow}: { activeIndex :n
 
     function Open(){
         const container = document.getElementById("projectContainer");
-        const element = document.querySelector('.containerScndCard' + num)
-        if (container && element){
-            container.prepend(element);
-        }
-
-        gsap.to('.containerScndCard' + num, { height: 450, duration: 0.2, delay: 0.2})
-        
+        const element = document.querySelector('.containerScndCard' + num);
+        gsap.to('.containerScndCard', {duration: 0, delay: 0, order: 0})
+        gsap.to('.containerScndCard' + num, {order: -10, delay: 0.2, duration: 0})
+        gsap.to('.containerScndCard' + num, { height: 450, duration: 0.1, delay: 0.2})
         gsap.to('.imgWebsit' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.txt' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.Button' + num, {opacity: 1, duration: 0.2, delay: 0.5})
         gsap.to('.tittle', {opacity: 1, duration: 0.2, delay: 0.5})
+        
             setIsOpen(true)}
 
     useEffect(()=> 
@@ -60,7 +65,7 @@ export default function Card({ activeIndex, Interface, onShow}: { activeIndex :n
     ,[activeIndex])
 
     return(
-        <ScndCardSyle className={`containerScndCard containerScndCard` + num}
+        <ScndCardSyle ref={ref} className={`containerScndCard containerScndCard` + num}
                         onMouseLeave={onMouseLeave}
                         onMouseEnter={onMouseEnter}
                         onClick={()=> onClick()}>
@@ -100,9 +105,6 @@ const ScndCardSyle = styled.div`
     border-top: solid 2px black;
 
     
-    .txt{
-        opacity: 0;
-    }
 
     .isOpen{
         position: relative;
