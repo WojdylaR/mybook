@@ -21,10 +21,10 @@ export default function FormContact(){
         <FormContactStyle >
             <div className="text">
                 <h2 className="tittleText">Un Projet? Une idée?</h2>
-                <h3>Vous êtes un particulier ?<span className="nowrap"> Un Professionel ?</span></h3>
+                <h3>Vous êtes un particulier ?<span className="nowrap"> Un professionel ?</span></h3>
                 <p>
-                    N'hésitez pas a me contacter par mail, via le formulaire ou bien sur linkedin.<br/>
-                    Mes autres projets, hors web, sont également disponible sur mon GitHub !
+                    N'hésitez pas à me contacter par mail, via le formulaire ou bien sur linkedin.<br/>
+                    Mes autres projets, hors web, sont également disponibles sur mon GitHub !
                 </p>
                 <div className="logoContainer">
                     <a href="https://www.linkedin.com/in/ronan-wojdyla-07aa3920a/"><img alt="linkedin" className="logo" src={require("../../Assets/Contact/linkedin.png")} /></a>
