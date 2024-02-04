@@ -85,7 +85,7 @@ const ContactStyle = styled.div`
     }
 
     @media (max-width: 600px){
-        .h1{
+        .h1Contact{
             font-size: 60px;
         }
     }
