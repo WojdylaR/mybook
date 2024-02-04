@@ -31,17 +31,19 @@ function NavBar() {
     return( 
         <NavBarStyle className='nav_bar'>
             <div className='logo_container'>
-                <label id='homeNav' style={{top: '25px'}}>HOME</label>
-                <a href="#home"><img alt="home" onClick={() =>scrollOnClick('home')} onMouseOut={() => handleMouseOut('homeNav')} onMouseOver={() => handleMouseOver('homeNav')} className='logo' src={require('../../Assets/home.png')}/></a>
+                <label id='homeNav'>HOME</label>
+                <img alt="home" onClick={() =>scrollOnClick('home')} onMouseOut={() => handleMouseOut('homeNav')} onMouseOver={() => handleMouseOver('homeNav')} className='logo' src={require('../../Assets/home.png')}/>
             </div>
-            <div>
-                <label id='profilNav' style={{top: '40px'}}>PROFIL</label>
+            <div className='logo_container'>
+                <label id='profilNav'>PROFIL</label>
                 <img alt="profil" onClick={() =>scrollOnClick('profil-page')}    onMouseOut={()  => handleMouseOut('profilNav')} onMouseOver={() => handleMouseOver('profilNav')} className='logo' src={require('../../Assets/profil.png')}/>
-            </div><div>
-                <label id='projectsNav' style={{top: '60px'}}>PROJECTS</label>
+            </div>
+            <div className='logo_container'>
+                <label id='projectsNav'>PROJECTS</label>
                 <img alt="projects" onClick={() =>scrollOnClick('projects')} onMouseOut={() => handleMouseOut('projectsNav')} onMouseOver={() => handleMouseOver('projectsNav')} className='logo' src={require('../../Assets/work.png')}/>
-            </div><div>
-                <label id='contactNav' style={{top: '50px'}}>CONTACT</label>
+            </div >
+            <div className='logo_container'>
+                <label id='contactNav'>CONTACT</label>
                 <img alt="contact" onClick={() =>scrollOnClick('contact-content')} onMouseOut={() => handleMouseOut('contactNav')} onMouseOver={() => handleMouseOver('contactNav')} className='logo' src={require('../../Assets/contact.png')}/>
             </div>
         </NavBarStyle>
@@ -58,20 +60,17 @@ const NavBarStyle = styled.nav`
     flex-direction: column;
     width: 50px;
     right: 10px;
-    align-items: center;
     height: 60%;
     top: 20%;
     justify-content: space-around;
     border-left: solid 1px white;
     color: white;
-    
     z-index: 2;
     opacity: 0;
 
     .logo{
         position: relative;
         width: 30px;
-        left: -5px;
         transition: 0.1s;
     }
 
@@ -80,11 +79,22 @@ const NavBarStyle = styled.nav`
         cursor: pointer;
     }
 
-    label{
+    .logo_container{
         position: relative;
+        display: flex;
+        height: 50px;
+        width: 50px;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    label{
+        position: absolute;
         writing-mode: vertical-rl;
         text-orientation: upright;
-        right: 35px;
+        right: 50px;
         font-family: Bebas Neue;
         letter-spacing: -1px;
         opacity: 0;
