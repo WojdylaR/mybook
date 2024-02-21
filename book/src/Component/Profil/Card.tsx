@@ -9,6 +9,25 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function CardCompetence(props: any){
 
+        useEffect(()=>{
+            gsap.fromTo('.grid-item',
+                {opacity: 0,
+                    scale: 0.8
+                },
+                {
+                    scrollTrigger:{
+                        trigger:(document.getElementById('triggerCompetence')),
+                        start: "25% 75%",
+                    },
+                    y:0,
+                    opacity: 1,
+                    duration: 2,
+                    scale: 1,
+                    stagger: 0.05,
+                    ease: "elastic.out(1,0.3)",
+                })
+                console.log(document.getElementById('triggerCompetence'))
+        },[])
 
     return(
         <CompetenceCardStyle className="grid-item">
@@ -26,14 +45,18 @@ const CompetenceCardStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
+    opacity: 1;
     border: solid 2px rgb(72, 72, 72);
     border-radius: 4px;
 
     img{
         position: relative;
         height: 45%;
+        width: 90%;
+        opacity: 1;
+        object-fit: scale-down;
     }
 
     h3{

@@ -54,6 +54,7 @@ const PhotoStyle = styled.div`
         width: 100%;
         left: 500px;
         clip-path: circle(50%);
+        
     }
 
     @media (max-width: 1250px){

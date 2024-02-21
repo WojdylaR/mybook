@@ -33,7 +33,7 @@ export default function FormContact(){
             </div>
             
             <div className="cadre" id="contactForm">
-                <h2 className="tittleContact">Me Contacter</h2>
+                <h2 className="tittleContact">Me contacter</h2>
                 <form ref={formRef}><div className="grille">
                         <Input name="user_surname">Prenom</Input>
                         <Input name="user_name">Nom</Input>

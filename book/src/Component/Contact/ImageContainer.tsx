@@ -33,7 +33,7 @@ export default function ImageContainer(){
                         </div>
                     </p>
                     <button onClick={onClick}>
-                        <span >Contact</span>
+                        <span >Me contacter</span>
                     </button>
                 </div>
         </ImageContainerStyle>

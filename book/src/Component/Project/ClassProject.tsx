@@ -15,7 +15,7 @@ export const VvaInterface:ProjectInterface = {
 }
 
 export const RageInterface:ProjectInterface = {
-    name: "RageTattoo",
+    name: "RageTatt",
     num:1,
     img: "rage.png",
     description: "Jeune tatoueuse Lyonnaise, Rage sait se démarquer grace a son style gothique et horrifique",
@@ -23,7 +23,7 @@ export const RageInterface:ProjectInterface = {
 }
 
 export const NoProjectInterface1:ProjectInterface = {
-    name: "En Cours...",
+    name: "En Cours",
     num:2,
     img: "rien.png",
     description: "Rajoutez votre projet ici, pour cela, n'hésitez à me contacter!",

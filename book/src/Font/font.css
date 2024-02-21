@@ -14,3 +14,13 @@
     font-family: josefin;
     src: url('./Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
 }
+
+@font-face {
+    font-family: sketch;
+    src: url(./kg_second_chances/KGSecondChancesSketch.ttf);
+}
+
+@font-face {
+    font-family: solid;
+    src: url(./kg_second_chances/KGSecondChancesSolid.ttf);
+}

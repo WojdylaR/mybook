@@ -45,7 +45,7 @@ const ProfilStyle = styled.section`
     .leftSide{
         position: relative;
         width: 65%;
-        height: 100%;
+        height: calc(100% - 40px);
     }
 
     .rightSide{

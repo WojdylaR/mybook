@@ -4,10 +4,10 @@ export default function Description(){
     return(
         <DescriptionStyle>
             <div className="tittle">
-                <h3>A Propos De Moi:</h3>
+                <h3>A Propos De Moi</h3>
             </div>
             <div className="description">
-                <p> Développeur web junior, j'aime apprendre et surtout monter en compétences.<br />
+                <p> Développeur web junior, spécialisé dans le Font-End (React, Typescript) j'aime apprendre et surtout monter en compétences.<br />
                     Je suis avant tout mordu et passionné
                     d'informatique et de nouvelles
                     technologies.
@@ -58,8 +58,8 @@ const DescriptionStyle = styled.div`
     }
 
     p{
-        font-family: lustria;
-        font-size: 1.5vw;
+        font-family: josefin;
+        font-size: 1.4vw;
         line-height: 30px;
         box-sizing: border-box;
         padding:20px;
@@ -68,11 +68,14 @@ const DescriptionStyle = styled.div`
     @media (max-width: 1250px){
         left: 0%;
         width: 50vw;
-        height: 35vw;
+        height: 35vh;
         top: 0%;
     }
 
     @media (max-width: 950px){
+
+        
+
         .tittle{
             display: none;
         }
@@ -88,7 +91,7 @@ const DescriptionStyle = styled.div`
 
         @media (max-width: 650px){
             width: 100vw;
-            height: 50vw;
+            height: auto;
         }
     }
 `

@@ -40,7 +40,6 @@ function Project(){
                     <Card onShow={()=> ActiveIndex === VvaInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(VvaInterface.num)} activeIndex={ActiveIndex} Interface={VvaInterface}/>
                     <Card onShow={()=> ActiveIndex === RageInterface.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(RageInterface.num)} activeIndex={ActiveIndex} Interface={RageInterface}/>
                     <Card onShow={()=> ActiveIndex === NoProjectInterface1.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(NoProjectInterface1.num)} activeIndex={ActiveIndex} Interface={NoProjectInterface1}/>
-                    <Card onShow={()=> ActiveIndex === NoProjectInterface2.num ? setIsAtiveIndex(-1) : setIsAtiveIndex(NoProjectInterface2.num)} activeIndex={ActiveIndex} Interface={NoProjectInterface2}/>
                </div>
             </div>
         </ProjectStyle>

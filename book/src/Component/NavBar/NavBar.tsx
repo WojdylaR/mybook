@@ -59,7 +59,7 @@ const NavBarStyle = styled.nav`
     display: flex;
     flex-direction: column;
     width: 50px;
-    right: 10px;
+    right: 0px;
     height: 60%;
     top: 20%;
     justify-content: space-around;
@@ -92,11 +92,9 @@ const NavBarStyle = styled.nav`
 
     label{
         position: absolute;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        right: 50px;
+        top: 50px;
         font-family: Bebas Neue;
-        letter-spacing: -1px;
+        letter-spacing: 1px;
         opacity: 0;
     }
 `

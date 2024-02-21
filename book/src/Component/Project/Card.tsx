@@ -13,11 +13,6 @@ export default function Card({ activeIndex, Interface, onShow}: { activeIndex :n
     
     const ref = useRef<HTMLHeadingElement>(null)
 
-    useLayoutEffect(() => {
-        if (ref && ref.current) {
-            console.log(ref.current.offsetTop);
-          }
-        }, [ref]);
 
     function onClick(){
 
@@ -152,7 +147,7 @@ const ScndCardSyle = styled.div`
         height: 20%;
         opacity: 0;
         align-items: center;
-        font-family:  lustria;
+        font-family:  lustria ;
         font-size: 150%;
     }
 
